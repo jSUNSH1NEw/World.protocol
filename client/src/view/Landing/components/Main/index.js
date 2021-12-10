@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from '@chakra-ui/react';
-import "./main.scss";
+import "./Main.css";
 // import img of logo
 
 function Main() {
     return (
         <div className="landing-main">
             <div className="landing-main-img-wrap">
-                <img src={} alt="" />
+                <img alt="" />
             </div>
 
             <div className="landing-main-title-wrap">

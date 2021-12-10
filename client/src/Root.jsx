@@ -1,5 +1,4 @@
-import React from 'react';
-import './assets/css/index.css';
+import React, { Component } from 'react';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { SnackbarProvider } from "notistack";
