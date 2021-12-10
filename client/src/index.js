@@ -1,19 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { SnackbarProvider } from "notistack";
-import { MoralisProvider } from "react-moralis"
+// import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
-ReactDOM.render(
-  <MoralisProvider appId="xxxxxxxx" serverUrl="xxxxxxxx">
-    <App />
-  </MoralisProvider>,
-  document.getElementById('root')
-);
+import ReactDOM from "react-dom";
+import Root from "./Root";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const subgraphUri = "http://localhost:8000/subgraphs/name/scaffold-eth/your-contract";
+
+// const client = new ApolloClient({
+//   uri: subgraphUri,
+//   cache: new InMemoryCache(),
+// });
+
+ReactDOM.render(<Root />, document.getElementById("root"));
+

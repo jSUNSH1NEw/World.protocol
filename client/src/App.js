@@ -1,34 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useCallback } from "react";
+import { Route, Redirect, Switch, useLocation } from "react-router-dom";
 import { Moralis } from "react-moralis"
+import logo from './assets/img/logo.svg';
+import './assets/css/App.css';
+import landing from "./Root/Landing";"";
 
 function App() {
-  const isWeb3Active = Moralis.ensureWeb3IsInstalled()
-  if (isWeb3Active) {
-    console.log("Active")
-    return (
-    <div>
-      <h1>Web3 is instaled </h1>
-      <h2>{Moralis.getAccount()}</h2>
-    </div>
-    )
-  } else {
-    await Moralis.enable()
-  }
-
-
 
   return (
+    <landing/>
 
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-      <isWeb3Active></isWeb3Active>
-    </div>
   );
 }
 
