@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "Montserrat";
+    src: local("Montserrat"), url("../fonts/Monts/Montserrat-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: local("Montserrat Bold"), url("../fonts/Monts/Montserrat-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Medium";
+    src: local("Montserrat Medium"), url("../fonts/Monts/Montserrat-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Montserrat Light";
+    src: local("Montserrat Light"), url("../fonts/Monts/Montserrat-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "RedRose";
+    src: local("RedRose"), url("../fonts/Red-Roses/RedRose-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "RedRose Light";
+    src: local("RedRose Light"), url("../fonts/Red-Roses/static/RedRose-Light.ttf") format("truetype");
+}
+
+
+@font-face {
+    font-family: "RedRose semi-bold";
+    src: local("RedRose SemiBold"), url("../fonts/Red-Roses/static/RedRose-SemiBold.ttf") format("truetype");
+}
+@font-face {
+    font-family: "RedRose Bold";
+    src: local("RedRose Bold "), url("../fonts/Red-Roses/static/RedRose-Bold.ttf") format("truetype");
+}

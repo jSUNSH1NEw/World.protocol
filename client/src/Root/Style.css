@@ -1,0 +1,144 @@
+@import "../assets/css/fonts.css";
+ * {
+	 outline: none;
+	 box-sizing: border-box;
+}
+ html, body, #root {
+	 font-family: "Square";
+	 -webkit-font-smoothing: antialiased;
+	 -moz-osx-font-smoothing: grayscale;
+	 overflow: hidden;
+}
+ body {
+	 margin: 0;
+	 box-sizing: border-box;
+}
+ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+	 -webkit-appearance: none !important;
+}
+ input[type="number"] {
+	 -moz-appearance: textfield !important;
+}
+ p {
+	 margin: 0;
+}
+ .web3modal-modal-lightbox {
+	 z-index: 10 !important;
+	 background: rgba(0, 0, 0, 0.2) !important;
+	 backdrop-filter: blur(100px) !important;
+}
+ .web3modal-modal-lightbox .web3modal-modal-card {
+	 background: #181b1c;
+	 backdrop-filter: blur(100px);
+	 border-radius: 10px;
+}
+ .web3modal-modal-lightbox .web3modal-modal-card .web3modal-provider-wrapper {
+	 border: 1px solid rgba(255, 255, 255, 0.1);
+	 border-radius: 0;
+	 padding: 0;
+}
+ .web3modal-modal-lightbox .web3modal-modal-card .web3modal-provider-wrapper .web3modal-provider-container {
+	 background-color: #000;
+	 border-radius: 0;
+}
+ .web3modal-modal-lightbox .web3modal-modal-card .web3modal-provider-wrapper .web3modal-provider-container:hover {
+	 background-color: #000;
+}
+ .web3modal-modal-lightbox .web3modal-modal-card .web3modal-provider-wrapper .web3modal-provider-container .web3modal-provider-name {
+	 font-family: Montserrat SemiBold;
+	 font-weight: 600;
+	 font-size: 24px;
+	 text-align: center;
+	 color: #fff;
+}
+ .web3modal-modal-lightbox .web3modal-modal-card .web3modal-provider-wrapper .web3modal-provider-container .web3modal-provider-description {
+	 font-family: Montserrat Light;
+	 font-weight: 300;
+	 font-size: 14px;
+	 text-align: center;
+	 color: rgba(255, 255, 255, 0.6);
+}
+ .walletconnect-qrcode__base {
+	/* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+}
+
+ .walletconnect-qrcode__base .walletconnect-modal__base {
+	 border-radius: 10px;
+	 padding: 30px 20px 20px 20px;
+	/* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
+}
+
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__header .walletconnect-modal__headerLogo {
+	 display: none;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__header p {
+	 margin-left: 24px;
+	 font-family: Montserrat SemiBold;
+	 font-style: normal;
+	 font-weight: 600;
+	 font-size: 20px;
+	 color: #fff;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__header .walletconnect-modal__close__wrapper {
+	 background: none;
+	 right: 23px;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__header .walletconnect-modal__close__wrapper .walletconnect-modal__close__icon .walletconnect-modal__close__line1 {
+	 border: 1px solid #fff;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__header .walletconnect-modal__close__wrapper .walletconnect-modal__close__icon .walletconnect-modal__close__line2 {
+	 border: 1px solid #fff;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__mobile__toggle {
+	 margin-bottom: 20px;
+	 background: none;
+	 width: 60%;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__mobile__toggle .walletconnect-modal__mobile__toggle_selector {
+	 height: 1px;
+	 background: #fff;
+	 top: 34px;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__mobile__toggle a {
+	 font-family: Montserrat SemiBold;
+	 font-style: normal;
+	 font-weight: 600;
+	 font-size: 18px;
+	 color: #fff;
+	 cursor: pointer;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__mobile__toggle a:last-child {
+	 color: rgba(255, 255, 255, 0.6);
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__mobile__toggle.right__selected a:nth-child(2) {
+	 color: rgba(255, 255, 255, 0.6);
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__mobile__toggle.right__selected a:last-child {
+	 color: #fff;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-qrcode__text {
+	 font-family: Montserrat Light;
+	 font-style: normal;
+	 font-weight: 300;
+	 font-size: 14px;
+	 text-align: center;
+	 color: rgba(255, 255, 255, 0.6);
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-qrcode__image {
+	 background: #fff;
+	 border-radius: 10px;
+	 padding: 13px;
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__footer {
+	 font-family: Montserrat Light;
+	 font-weight: 300;
+	 font-size: 14px;
+	 text-align: center;
+	 color: rgba(255, 255, 255, 0.6);
+}
+ .walletconnect-qrcode__base .walletconnect-modal__base .walletconnect-modal__base__row h3 {
+	 font-family: Montserrat SemiBold;
+	 font-style: normal;
+	 font-weight: 600;
+	 font-size: 20px;
+ }

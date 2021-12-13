@@ -1,3 +1,5 @@
+@import "../../../../assets/css/fonts.css";
+
 .landing-main {
     flex: 1;
     display: flex;
@@ -23,7 +25,7 @@
     margin-bottom: 20px;
 }
 .landing-main .landing-main-title-wrap p {
-    font-family: Montserrat Bold;
+    font-family: Montserrat Light;
     font-style: normal;
     font-weight: bold;
     font-size: 55px;
@@ -35,7 +37,7 @@
     margin-bottom: 20px;
 }
 .landing-main .landing-main-help-text-wrap p {
-    font-family: Montserrat Medium;
+    font-family: RedRose Light;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;

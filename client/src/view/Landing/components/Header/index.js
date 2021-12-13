@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import "./header.css";
 import { Icon, Link, Box, Popover, Fade } from '@chakra-ui/react';
 
-import { ReactComponent as WRLDIcon } from "../../../../assets/icon/wrld-icon.svg";
+import { ReactComponent as WRLDIcon } from "../../../../assets/icon/wrld-icon-black.svg";
 import { ReactComponent as GithubIcon } from "../../../../assets/icon/github-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../../../assets/icon/twitter-icon.svg";
 
 // BY component={} in SvgIcon, it will render the SVG file as a React component.
 // https://chakra-ui.com/docs/svg-icon
 
-
+import Navbar from '../../../../components/NavBar';
 
 function Header() {
     const [anchorEl, setAnchorEl] = useState(null);
@@ -21,8 +21,10 @@ function Header() {
     const open = Boolean(anchorEl);
 
     return (
+
         <div className="landing-header">
-            <Icon color="primary" component={WRLDIcon} viewBox="0 0 174 40" style={{ minWidth: 174, minHeight: 40 }} />
+            <div> <Navbar /> </div>
+            <WRLDIcon color="primary"  viewBox="0 0 174 40" style={{ minWidth: 174, minHeight: 40 }} />
             <div className="landing-header-nav-wrap">
                 <Box component="div" onMouseEnter={e => handleClick(e)} onMouseLeave={e => handleClick(e)}>
                     <p className="landing-header-nav-text">Social</p>
