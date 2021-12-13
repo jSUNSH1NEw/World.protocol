@@ -9364,10 +9364,10 @@
   "resolved" "https://registry.npmjs.org/mock-fs/-/mock-fs-4.14.0.tgz"
   "version" "4.14.0"
 
-"moralis@>=0.0.134":
-  "integrity" "sha512-/oYF6ep959ad8zw2PxFdkqwnCc6Vs4gD7w4qkgjVfa34BzdX3BuSjfDnXpMCn8DpUA/OFgB2HWdXFjKDXB4IKw=="
-  "resolved" "https://registry.npmjs.org/moralis/-/moralis-0.0.149.tgz"
-  "version" "0.0.149"
+"moralis@^0.0.154", "moralis@>=0.0.134":
+  "integrity" "sha512-d4m/ApwmGezO6ZDERMtOM97TydkJWWjYBvhDWIvMt6BVFyaHIBB7e0pf96SJicgtG0RJ0v147yAOtIdxWYnsow=="
+  "resolved" "https://registry.npmjs.org/moralis/-/moralis-0.0.154.tgz"
+  "version" "0.0.154"
   dependencies:
     "@babel/runtime" "7.12.5"
     "@babel/runtime-corejs3" "7.12.5"

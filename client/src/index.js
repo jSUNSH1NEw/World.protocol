@@ -1,14 +1,38 @@
-// import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
-
 import ReactDOM from "react-dom";
-import Root from "./Root";
 
-// const subgraphUri = "http://localhost:8000/subgraphs/name/scaffold-eth/your-contract";
+import React, { Component } from 'react';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { SnackbarProvider } from "notistack";
+import { MoralisProvider } from "react-moralis"
+import { MoralisDappProvider } from "./hooks/Web3ctxProvider/web3provider";
+import { BrowserRouter } from "react-router-dom";
 
-// const client = new ApolloClient({
-//   uri: subgraphUri,
-//   cache: new InMemoryCache(),
-// });
+const appId = process.env.REACT_APP_MORALIS_APP_ID;
+const serverUrlDev = process.env.REACT_APP_MORALIS_SERVER_URL_DEV;
 
-ReactDOM.render(<Root />, document.getElementById("root"));
 
+
+const Application = () => {
+    const isServerInfo = appId && serverUrlDev ? true : false;
+    if (isServerInfo) 
+        return (
+        <MoralisProvider appId="appId" serverUrl="serverUrl">
+        <MoralisDappProvider> 
+         <BrowserRouter>
+           <SnackbarProvider>
+             <App isServerInfo/>
+            </SnackbarProvider>
+          </BrowserRouter> 
+        </MoralisDappProvider>
+       </MoralisProvider>
+    )
+} ;
+  
+ReactDOM.render(
+    // <React.StrictMode>
+    <Application />,
+    // </React.StrictMode>,
+    document.getElementById("root")
+  );
+reportWebVitals();
