@@ -11,7 +11,6 @@ import WRLDIcon from "../../../../assets/icon/coin.png";
 // BY component={} in SvgIcon, it will render the SVG file as a React component.
 // https://chakra-ui.com/docs/svg-icon
 
-import Navbar from '../../../../components/NavBar';
 
 function Header() {
     const [anchorEl, setAnchorEl] = useState(null);

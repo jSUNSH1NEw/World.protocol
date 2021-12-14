@@ -67,6 +67,14 @@
     line-height: 22px;
     color: rgb(0, 0, 0);
 }
+
+.landing-main-card-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 350px;
+}
 @media screen and (max-width: 560px) {
     .landing-main .landing-main-title-wrap p {
         font-size: 40px;

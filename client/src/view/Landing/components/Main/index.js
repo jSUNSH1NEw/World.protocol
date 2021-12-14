@@ -1,9 +1,41 @@
 import React from "react";
-import { Link } from '@chakra-ui/react';
+import { Link, ChakraProvider, SimpleGrid, Container  } from '@chakra-ui/react';
 import "./Main.css";
+import Card from "../../../../components/Card.jsx";
 import WRLDIcon  from "../../../../assets/icon/LogoDesigne.png";
 
 function Main() {
+    const dataList = [
+        {
+          id: "1",
+          image: "Name",
+          summary: "This is a summary, can be any length",
+          link: "Very short, can be any description"
+        },
+        {
+          id: "2",
+          image: "Name",
+          summary:
+            "Another summary, make sure that this is very responsives",
+          link: "Billy Bob Bob Bob Bob likes Markiplier gameplay videos"
+        },
+        {
+            id: "3",
+            image: "Name",
+            summary:
+              "Another summary, make sure that this is very",
+            link: "Billy Bob Bob Bob Bob likes Markiplier gameplay videos"
+        },
+        {
+          id: "4",
+          image: "name",
+          summary: "Finalize them summary, hurry, we are close to deadline",
+          link: "Wow, this is very descriptive! I wonder how long it is"
+        }
+      ];
+
+
+
     return (
         <div className="landing-main">
             <div className="landing-main-img-wrap">
@@ -35,6 +67,25 @@ function Main() {
                     </div>
                 </Link>
             </div>
+            <div className="landing-main-card-wrap">
+            <ChakraProvider>
+                <Container maxW="80rem" maxH="150rem" centerContent>
+                    <SimpleGrid columns={[4]}>
+                        {dataList.map(function (data) {
+                            const { id, image, product, summary, link, longLine } = data;
+                        return (
+                            <Card
+                                key={id}
+                                product={product}
+                                summary={summary}
+                                longLine={link}
+                            />
+                        );
+                        })}
+                    </SimpleGrid>
+                </Container>
+            </ChakraProvider>
+        </div>
         </div>
     );
 }
