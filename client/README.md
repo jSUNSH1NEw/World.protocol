@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+![World Protocol](thumb.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+<div align='center'>
+  
+### Quick Links
+  
+<a href=''>
+  
+<img src='https://img.shields.io/badge/HOMEPAGE-gray?style=for-the-badge'>
+  
+</a>
+  
+<a href=''>
+  
+<img src='https://img.shields.io/badge/Lite.Paper-blue?style=for-the-badge'>
+  
+</a>
+  
+  
+<br />
+  
+<br />
+  
+  
+</div>
 
-### `yarn start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### The World token availibity! 🥳 🚀
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- iOS/macOS: Search for "well: reboot your mindset" on the [iOS app store](https://apps.apple.com/us/app/well-reboot-your-mindset/id1573357406).
+- Web: Visit [https://well-app.netlify.app](https://well-app.netlify.app). Install as a PWA for native-like functionality!
+- Android: coming soon 👀
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br />
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# :man_with_gua_pi_mao:  :guardsman: :speech_balloon: :japanese_ogre: Our team 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+- Joffrey Weertz 
+  - Tag [@wrld_token](https://twitter.com/wrld_token) and/or `#WorldProtocol`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Samuel Dhayeng
+  - Tag [@wrld_token](https://twitter.com/wrld_token) and/or `#WorldProtocol`
+  
+- Malima Anthony
+  - Tag [@wrld_token](https://twitter.com/wrld_token) and/or `#WorldProtocol`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Hector Ruiz
+  - Tag [@wrld_token](https://twitter.com/wrld_token) and/or `#WorldProtocol`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+# 🧐 Project philosophy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> The World protocol aim to support the cash flow of a massive user cashout token
+ in order to raise the capitalization of the token for new users
+> 
+> 
+**Read more about the World Protocol on [the project homepage]().**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# 📒 Wiki
 
-### Code Splitting
+This project repository has [a great wiki](https://github.com/jSUNSH1NEw/MoralisAvalanchehackathon/wiki) that you should consider reading! It goes into detail about the project from a more technical aspect. If you are interested in learning more about the dAPP itself, go ahead and check it out!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 👨‍💻 Tech stack
 
-### Analyzing the Bundle Size
+Here's a brief high-level overview of the tech stack the World protocol uses:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# ✍️ Contributing
 
-### Advanced Configuration
+Interested in contributing to the World Protocol ? Thanks so much for your interest! We are always looking for improvements to the project and contributions from open-source developers are greatly appreciated.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+If you have a contribution in mind, please check out our [Contribution Guide]()
 
-### Deployment
+# 🌟 Spread the word!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+If you want to say thank you and/or support active development of the Well app:
 
-### `yarn build` fails to minify
+- Add a GitHub Star to the project!
+- Tweet about the project on your Twitter!
+  - Tag [@wrld_token](https://twitter.com/wrld_token) and/or `#WorldProtocol`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# ⚠️ License
+
+The WRLD decentralise application is free and open-source software licensed under the GNU General Public License v3.0. All designs were created by [Joffrey Weertz](https://github.com/chroline).
+
+<br />
+
+---
+
+<br />
+
+# 💛
+
+Reminder that *you are great, you are enough, and your presence is valued.* 
