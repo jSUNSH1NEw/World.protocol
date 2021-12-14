@@ -38,20 +38,20 @@
 
 <br />
 
-# :man_with_gua_pi_mao:  :guardsman: :speech_balloon: :japanese_ogre: Our team 
+#  Our team 
 
 
-- Joffrey Weertz 
-  - Tag [@wrld_token](https://twitter.com/wrld_token) and/or `#WorldProtocol`
+- :guardsman: Joffrey Weertz 
+  -  [@JSUNSH1NEw](https://twitter.com/JSUNSH1NEw) Creator full-stack and founder of `#WorldProtocol`
 
-- Samuel Dhayeng
-  - Tag [@wrld_token](https://twitter.com/wrld_token) and/or `#WorldProtocol`
+- :man_with_gua_pi_mao: Samuel Dhayeng
+  -  [@tom_ferguson](https://twitter.com/wrld_token) Smart-contract developer of `#WorldProtocol`
   
-- Malima Anthony
-  - Tag [@wrld_token](https://twitter.com/wrld_token) and/or `#WorldProtocol`
+- :speech_balloon: Malima Anthony
+  -  [@Malima_anthony](https://twitter.com/wrld_token) Commercial advisor of `#WorldProtocol`
 
-- Hector Ruiz
-  - Tag [@wrld_token](https://twitter.com/wrld_token) and/or `#WorldProtocol`
+- :japanese_ogre: Hector Ruiz
+  -  [@Hector_ruiz](https://twitter.com/wrld_token) Front-end developer `#WorldProtocol`
 
 
 
@@ -89,8 +89,9 @@ If you want to say thank you and/or support active development of the Well app:
 
 
 # ⚠️ License
+TODO : 
 
-The WRLD decentralise application is free and open-source software licensed under the GNU General Public License v3.0. All designs were created by [Joffrey Weertz](https://github.com/chroline).
+The WRLD decentralise application is free and open-source software licensed under the GNU General Public License v3.0. All designs were created by [Joffrey Weertz](https://github.com/jSUNSH1NEw).
 
 <br />
 
