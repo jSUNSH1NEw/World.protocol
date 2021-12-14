@@ -10,18 +10,17 @@
     position: relative;
 }
 .landing-main .landing-main-img-wrap {
-    max-width: 400px;
-    max-height: 400px;
-    overflow: hidden;
-    margin-bottom: 20px;
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 2px;
 }
 .landing-main .landing-main-img-wrap img {
     width: 100%;
-    width: 100%;
+    z-index: 10;
 }
 .landing-main .landing-main-title-wrap {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
     margin-bottom: 20px;
 }
 .landing-main .landing-main-title-wrap p {
@@ -38,9 +37,9 @@
 }
 .landing-main .landing-main-help-text-wrap p {
     font-family: RedRose Light;
-    font-style: normal;
+    font-style: bold;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 23px;
     color: #fff;
 }
 .landing-main .landing-main-btns-wrap {
@@ -51,22 +50,22 @@
     text-decoration: none;
 }
 .landing-main .landing-main-btns-wrap .landing-main-btn {
-    margin: 0 15px;
-    padding: 14px 26px;
-    min-width: 200px;
-    background: #232323;
+    margin: 0 11px;
+    padding: 2px 30px;
+    min-width: 70px;
+    background: #ffffff;
     box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
-    border-radius: 10px;
+    border-radius: 27px;
     cursor: pointer;
     text-align: center;
 }
 .landing-main .landing-main-btns-wrap .landing-main-btn p {
-    font-family: Montserrat Semibold;
+    font-family: Montserrat Bold;
     font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 300;
+    font-size: 15px;
     line-height: 22px;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 @media screen and (max-width: 560px) {
     .landing-main .landing-main-title-wrap p {
