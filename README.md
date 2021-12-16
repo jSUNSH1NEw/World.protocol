@@ -53,6 +53,9 @@
 - :japanese_ogre: Hector Ruiz
   -  [@Hector_ruiz](https://twitter.com/wrld_token) Front-end developer `#WorldProtocol`
 
+- :guardsman: Jan Dalhuysen
+  -  [@JanDalhuysen](https://twitter.com/JanDalhuysen) Front-end developer `#WorldProtocol`
+
 
 
 # 🧐 Project philosophy
