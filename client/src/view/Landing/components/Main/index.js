@@ -1,46 +1,38 @@
-import React from "react";
-import { Link, ChakraProvider, SimpleGrid, Container  } from '@chakra-ui/react';
+import { useEffect, useRef, useState, useImperativeHandle, forwardRef  } from "react";
 import "./Main.css";
-import Card from "../../../../components/Card.jsx";
+import { gsap } from "gsap";
+import styled from 'styled-components';
+import Tilt from 'react-parallax-tilt';
+
+
 import WRLDIcon  from "../../../../assets/icon/LogoDesigne.png";
-
+import Card from "../../../../components/Card.jsx";
 function Main() {
-    const dataList = [
-        {
-          id: "1",
-          image: "Name",
-          summary: "This is a summary, can be any length",
-          link: "Very short, can be any description"
-        },
-        {
-          id: "2",
-          image: "Name",
-          summary:
-            "Another summary, make sure that this is very responsives",
-          link: "Billy Bob Bob Bob Bob likes Markiplier gameplay videos"
-        },
-        {
-            id: "3",
-            image: "Name",
-            summary:
-              "Another summary, make sure that this is very",
-            link: "Billy Bob Bob Bob Bob likes Markiplier gameplay videos"
-        },
-        {
-          id: "4",
-          image: "name",
-          summary: "Finalize them summary, hurry, we are close to deadline",
-          link: "Wow, this is very descriptive! I wonder how long it is"
-        }
-      ];
+  // store a reference to the box div
+ // const boxRef = useRef();
 
+  // wait until DOM has been rendered
+ // useEffect(() => {
+   // gsap.to(boxRef.current, { rotation: "+=360" });
+  //});
+
+  // with this  <div className="box" ref={boxRef}>Hello</div> <!--- 
 
 
     return (
         <div className="landing-main">
+            <Tilt
+                 tiltMaxAngleX={35}
+                 tiltMaxAngleY={35}
+                 perspective={900}
+                 scale={1.2}
+                 transitionSpeed={2000}
+                 gyroscope={true}
+            >
             <div className="landing-main-img-wrap">
             <img src={WRLDIcon} alt="World Protocol logo" />
             </div>
+            </Tilt>
 
             <div className="landing-main-help-text-wrap">
                 <p>WE HELP THE BRAVE BUILD SAFELY THEIR</p>
@@ -61,33 +53,33 @@ function Main() {
                     </div>
                 </Link>
 
+              
                 <Link href="" target="_blank" rel="noreferrer">
                     <div className="landing-main-btn">
                         <p>ENTRY TICKET</p>
                     </div>
                 </Link>
             </div>
+            <div className="Team-title">
+                <p>Our team</p>
+            </div>
             <div className="landing-main-card-wrap">
-            <ChakraProvider>
-                <Container maxW="80rem" maxH="150rem" centerContent>
-                    <SimpleGrid columns={[4]}>
-                        {dataList.map(function (data) {
-                            const { id, image, product, summary, link, longLine } = data;
-                        return (
-                            <Card
-                                key={id}
-                                product={product}
-                                summary={summary}
-                                longLine={link}
-                            />
-                        );
-                        })}
-                    </SimpleGrid>
-                </Container>
-            </ChakraProvider>
-        </div>
+                <Card />
+            </div>
+                
         </div>
     );
 }
 
 export default Main;
+
+
+
+const Link = styled.a`
+font-family: Montserrat Bold;
+font-style: normal;
+font-weight: 300;
+font-size: 15px;
+line-height: 22px;
+color: rgb(0, 0, 0);
+`

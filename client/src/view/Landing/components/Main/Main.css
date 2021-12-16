@@ -49,6 +49,8 @@
 .landing-main .landing-main-btns-wrap a {
     text-decoration: none;
 }
+
+
 .landing-main .landing-main-btns-wrap .landing-main-btn {
     margin: 0 11px;
     padding: 2px 30px;
@@ -68,13 +70,64 @@
     color: rgb(0, 0, 0);
 }
 
+.Team-title {
+    flex-direction: column;
+    align-items: center;
+    margin-top:125px;
+    margin-bottom:35px;
+
+}
+.Team-title p {
+    font-family: RedRose Light;
+    font-style: bold;
+    font-weight: 500;
+    font-size: 23px;
+    color: #fff;
+}
+
+
+
 .landing-main-card-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 350px;
+    margin-top: 25px;
 }
+
+
+
+
+.box {
+    background-color: seashell;
+    color:red;
+    display: block;
+}
+
+.circle {
+    color: royalblue;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+  }
+  
+  .circle.sm {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .circle.md {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .circle.lg {
+    width: 90px;
+    height: 90px;
+  }
+
 @media screen and (max-width: 560px) {
     .landing-main .landing-main-title-wrap p {
         font-size: 40px;

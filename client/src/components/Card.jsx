@@ -1,71 +1,105 @@
-import React from "react";
-import {
-  Box,
-  Flex,
-  AspectRatio,
-  Image,
-  Text,
-  Link,
-  Button,
-  Stack
-} from "@chakra-ui/react";
+import react from 'react';
+import './card.css'
+import Tilt from 'react-parallax-tilt';
 
 
+export default function Card () {
+    
+    return(
+<ul class="cards">
+<Tilt>
+  <li>
+    <a href="" class="card">
+      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                
+          <div class="card__header-text">
+            <h3 class="card__title">Weertz Joffrey</h3>
+            <span class="card__status">CEO of World protocol</span>
+          </div>          
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+    </a>
+  </li>
+  </Tilt> 
 
-function Card(props) {
-    const {image, summary, link } = props;
+  <Tilt>
+  <li>
+    <a href="" class="card">
+      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+          <div class="card__header-text">
+            <h3 class="card__title">Samuel dhayeng</h3>
+            <span class="card__status">Smart-contract devlopper</span>
+          </div>          
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+    </a>
+  </li>
+  </Tilt> 
+
+  <Tilt>
+  <li>
   
-    return (
-      <Box
-        p={4}
-        display={{ md: "flex" }}
-        maxWidth="350px"
-        maxHeight="200px" 
-        borderWidth={1}
-        margin={5}
-        rounded="xl"
-      >
-        <AspectRatio ratio={1 / 1}>
-          <Image
-            maxWidth="200px"
-            margin="auto"
-            alt="Picture of World Team Member"
-          >
-        {image}
-        </Image>
-          
-        </AspectRatio>
-        <Stack
-          align={{ base: "center", md: "stretch" }}
-          textAlign={{ base: "center", md: "left" }}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
-        >
-          <Text
-            fontWeight="bold"
-            fontSize="lg"
-            letterSpacing="wide"
-            color="teal.600"
-          >
-            {summary}
-          </Text>
-          <Link
-            my={1}
-            display="block"
-            fontSize="md"
-            lineHeight="normal"
-            fontWeight="semibold"
-            href="#"
-          >
-            {link}
-          </Link>
-          <Button maxWidth="100px" my={2}>
-            Click me!
-          </Button>
-        </Stack>
-      </Box>
-    );
-  }
+    <a href="" class="card">
+      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <div class="card__overlay">        
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+          <div class="card__header-text">
+            <h3 class="card__title">Hector ruiz</h3>
+            <span class="card__status">Front-end Developer</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+    </a>
+    
+  </li>
+  </Tilt>
+
+  <Tilt>
+  <li>
   
-  export default Card;
-  
+    <a href="" class="card">
+      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <div class="card__overlay">        
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+          <div class="card__header-text">
+            <h3 class="card__title">Jan Dalhuysen</h3>
+            <span class="card__status">Front-end developer</span>
+          </div>
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+    </a>
+    
+  </li>
+  </Tilt>
+
+  <Tilt>
+  <li>
+    <a href="" class="card">
+      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <div class="card__overlay">
+        <div class="card__header">
+          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+          <div class="card__header-text">
+            <h3 class="card__title">Anthony Malima</h3>
+            <span class="card__status">Community manager</span>
+          </div>          
+        </div>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+      </div>
+    </a>
+  </li>
+  </Tilt>    
+</ul>
+    )
+}
