@@ -24,7 +24,8 @@
   .card {
     position: relative;
     display: block;
-    height: 311px;  
+    height: 311px;
+    width: 250px;  
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
@@ -118,3 +119,37 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
   }    
+
+  @media screen and (max-width: 760px) {
+    .cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      width: 50%;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .cards {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+      width: 50%;
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+    }
+}
+@media screen and (max-width: 465px) {
+  .cards {
+    display: none;
+  }
+ 
+}

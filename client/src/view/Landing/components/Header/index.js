@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import "./header.css";
 
-import { ReactComponent as WRLDIconss } from "../../../../assets/icon/WRLD-white.svg";
-import { ReactComponent as GithubIcon } from "../../../../assets/icon/github-icon.svg";
-import { ReactComponent as TwitterIcon } from "../../../../assets/icon/twitter-icon.svg";
-
 import WRLDIcon from "../../../../assets/icon/coin.png";
 
 // BY component={} in SvgIcon, it will render the SVG file as a React component.
@@ -37,11 +33,11 @@ function Header() {
                                 <div className="tooltip">
                                     
                                     <link className="tooltip-item" href="https://github.com/jSUNSH1NEw/MoralisAvalanchehackathon/tree/main/client" target="_blank">
-                                        <icon color="primary" component={GithubIcon} />
+                                        <icon color="primary"  />
                                         <p>GITHUB</p>
                                     </link>
                                     <link className="tooltip-item" href="https://twitter.com/wrld_token" target="_blank">
-                                        <img color="primary" component={TwitterIcon} />
+                                        <img color="primary" />
                                         <p>TWITTER</p>
                                     </link>
                                 </div>

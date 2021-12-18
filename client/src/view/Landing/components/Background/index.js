@@ -1,7 +1,7 @@
 import React from "react";
 import "./background.css";
-import BlobsTop from "../../../../assets/icon/back1.png";
-import BlobCenter from "../../../../assets/icon/back2.png";
+import BlobsTop from "./img/back1.png";
+import BlobCenter from "./img/back2.png";
 
 function Background() {
     return (

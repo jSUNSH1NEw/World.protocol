@@ -6,7 +6,7 @@ import Tilt from 'react-parallax-tilt';
 
 
 import WRLDIcon  from "../../../../assets/icon/LogoDesigne.png";
-import Card from "../../../../components/Card.jsx";
+import Card from "../../../../components/Card/Card.jsx";
 function Main() {
   // store a reference to the box div
  // const boxRef = useRef();
