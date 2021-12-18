@@ -18,7 +18,7 @@ function Copyright(props) {
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        Your Website
+        World.protocol
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -34,8 +34,8 @@ export default function SignInSide() {
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
     console.log({
-      email: data.get('email'),
-      password: data.get('password'),
+      username: data.get('username'),
+      walletReceveir: data.get('walletReceveir'),
     });
   };
 
@@ -49,15 +49,17 @@ export default function SignInSide() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random)',
+            backgroundImage: 'url(https://i.ibb.co/hLRVyVH/cwOThC.webp)',
             backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+           
+        <Grid
+         item sx={{
+            backgroundColor: '#FFFFFF',
+         }} xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
               my: 8,
@@ -65,15 +67,19 @@ export default function SignInSide() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              color: 'black',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <Avatar sx={{ m: 1, bgcolor: 'black' }}>
               <LockOutlinedIcon />
             </Avatar>
-            <Typography component="h1" variant="h5">
-              CREATE YOUR NFT AUTHENTIFICATION TICKET 
+            <Typography  component="h1" variant="h5">
+              Create your
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Typography component="h1" variant="h5">
+             NFT authentification ticket
+            </Typography>
+            <Box sx={{ m: 1, bgcolor: 'white' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required
@@ -88,24 +94,27 @@ export default function SignInSide() {
                 margin="normal"
                 required
                 fullWidth
-                name="receveir"
-                label="receveir"
-                type="receveir"
-                id="receveir"
+                name="walletReceveir"
+                label="Wallet receveir"
+                type="walletReceveir"
+                id="walletReceveir"
                 autoComplete="External (non-metamask) Avax Wallet "
               />
               <FormControlLabel
+              
                 control={<Checkbox value="remember" color="primary" />}
                 label="Accept the DAO system"
               />
                 <Link href="#" variant="body2">
                     Read lite paper 
                 </Link>
+
+                
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2 }}
+                sx={{ mt: 3, mb: 2, bgcolor: 'black' }}
               >
                 CREATE YOUR TICKET
               </Button>

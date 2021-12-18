@@ -1,12 +1,30 @@
 import { useEffect, useRef, useState, useImperativeHandle, forwardRef  } from "react";
 import "./Main.css";
 import { gsap } from "gsap";
-import styled from 'styled-components';
 import Tilt from 'react-parallax-tilt';
+import { styled } from '@mui/material/styles';
+import { Paper, Link } from "@mui/material";
+
 
 
 import WRLDIcon  from "../../../../assets/icon/LogoDesigne.png";
 import Card from "../../../../components/Card/Card.jsx";
+
+
+
+const Linked = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    fontFamily: 'Montserrat Bold',
+    fontStyle: 'normal',
+    fontWeight: '300',
+    fontSize: '15px',
+    lineHeight: '22px',
+    color:'rgb(0, 0, 0)',
+  
+  }));
+  
+
+
 function Main() {
   // store a reference to the box div
  // const boxRef = useRef();
@@ -60,6 +78,7 @@ function Main() {
                     </div>
                 </Link>
             </div>
+
             <div className="Team-title">
                 <p>Our team</p>
             </div>
@@ -74,12 +93,3 @@ function Main() {
 export default Main;
 
 
-
-const Link = styled.a`
-font-family: Montserrat Bold;
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 22px;
-color: rgb(0, 0, 0);
-`
