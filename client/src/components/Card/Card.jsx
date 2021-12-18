@@ -1,6 +1,10 @@
 import react from 'react';
 import './card.css'
 import Tilt from 'react-parallax-tilt';
+import photos1 from "./photos/io.jpeg"
+import photos2 from "./photos/19.png"
+import photos3 from "./photos/hector.jpg"
+import photos4 from "./photos/photos4.jpg";
 
 
 export default function Card () {
@@ -10,7 +14,7 @@ export default function Card () {
 <Tilt>
   <li>
     <a href="" class="card">
-      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <img src={photos1} class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                
@@ -28,7 +32,7 @@ export default function Card () {
   <Tilt>
   <li>
     <a href="" class="card">
-      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <img src={photos2} class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
@@ -47,7 +51,7 @@ export default function Card () {
   <li>
   
     <a href="" class="card">
-      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <img src={photos3} class="card__image" alt="" />
       <div class="card__overlay">        
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
@@ -65,28 +69,8 @@ export default function Card () {
 
   <Tilt>
   <li>
-  
     <a href="" class="card">
-      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
-      <div class="card__overlay">        
-        <div class="card__header">
-          <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
-          <div class="card__header-text">
-            <h3 class="card__title">Jan Dalhuysen</h3>
-            <span class="card__status">Front-end developer</span>
-          </div>
-        </div>
-        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
-      </div>
-    </a>
-    
-  </li>
-  </Tilt>
-
-  <Tilt>
-  <li>
-    <a href="" class="card">
-      <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+      <img src={photos4} class="card__image" alt="" />
       <div class="card__overlay">
         <div class="card__header">
           <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
