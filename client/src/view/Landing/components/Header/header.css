@@ -8,10 +8,8 @@
     z-index: 10;
 }
 
-.landing-header-logo {
-    width: 55px;
+.logo {
     height: 50px;
-    margin-right: 10px;
 }
 
 .landing-header .landing-header-nav-wrap {

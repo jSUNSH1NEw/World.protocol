@@ -3,7 +3,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link
 } from "react-router-dom";
 import './assets/css/index.css';
 import Landing from "./view/Landing/landing";

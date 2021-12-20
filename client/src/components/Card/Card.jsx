@@ -1,4 +1,4 @@
-import react from 'react';
+
 import './card.css'
 import Tilt from 'react-parallax-tilt';
 import photos1 from "./photos/io.jpeg"

@@ -1,53 +1,115 @@
-import React, { useState } from "react";
-import "./header.css";
+import * as React from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Avatar from '@mui/material/Avatar';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from '@mui/material/MenuItem';
+import './header.css'
 
 import WRLDIcon from "../../../../assets/icon/coin.png";
 
-// BY component={} in SvgIcon, it will render the SVG file as a React component.
-// https://chakra-ui.com/docs/svg-icon
+const pages = ['Our Team','Roadmap'];
+const settings = ['Github', 'Tweeter'];
 
+const ResponsiveAppBar = () => {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
-function Header() {
-    const [anchorEl, setAnchorEl] = useState(null);
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
-    const handleClick = (e) => {
-        setAnchorEl(anchorEl ? null : e.currentTarget);
-    };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
-    const open = Boolean(anchorEl);
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
-    return (
+  return (
+    <AppBar position="static" sx={{ backgroundColor:'rgba(255,255,255,0.0) ', boxShadow:'0'}}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ mr: 20, display: { xs: 'none', md: 'flex' } }}
+          >
+                <img className='logo' src={WRLDIcon} />    
+          </Typography>
 
-        <div className="landing-header">
-            <div>  </div>
-            <img src={WRLDIcon} className="landing-header-logo" alt="logo" />
-            <div className="landing-header-nav-wrap">
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="account of current user"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+          </Box>
 
-                <div component="div" onMouseEnter={e => handleClick(e)} onMouseLeave={e => handleClick(e)}>
-                <p className="landing-header-nav-text">ROADMAP</p>
-                <p className="landing-header-nav-text">OUR TEAM</p>
-                    <p className="landing-header-nav-text">SOCIAL</p>
-                    <div className="landing-header-poper" open={open} anchorEl={anchorEl} transition>
-                       {({ TransitionProps }) => (
-                            <div {...TransitionProps} timeout={200}>
-                                <div className="tooltip">
-                                    
-                                    <link className="tooltip-item" href="https://github.com/jSUNSH1NEw/MoralisAvalanchehackathon/tree/main/client" target="_blank">
-                                        <icon color="primary"  />
-                                        <p>GITHUB</p>
-                                    </link>
-                                    <link className="tooltip-item" href="https://twitter.com/wrld_token" target="_blank">
-                                        <img color="primary" />
-                                        <p>TWITTER</p>
-                                    </link>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-}
-
-export default Header;
+          <Box sx={{ flexGrow: 1, display:'flex' }}>
+          {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {page}
+              </Button>
+            ))}
+            <Tooltip title="Open social">
+              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+              <Typography
+                noWrap
+                component="div"
+                sx={{ mr: 0, display: { xs: 'none', md: 'flex', color:'white' } }}
+                >
+                SOCIAL
+          </Typography>
+              </IconButton>
+            </Tooltip>
+            <Menu
+              sx={{ mt: '45px' }}
+              id="menu-appbar"
+              anchorEl={anchorElUser}
+              anchorOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'right',
+              }}
+              open={Boolean(anchorElUser)}
+              onClose={handleCloseUserMenu}
+            >
+              {settings.map((setting) => (
+                <MenuItem key={setting} onClick={handleCloseNavMenu}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
+  );
+};
+export default ResponsiveAppBar;
