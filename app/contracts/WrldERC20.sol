@@ -9,7 +9,7 @@ import "./BasicMetaTransaction.sol";
 
 /// @custom:security-contact samuel.gao023@gmail.com
 contract WorldMillion is ERC20, ERC20Burnable, Ownable, ERC20Permit, BasicMetaTransaction {
-    constructor() ERC20("WorldMillion", "WRLD") ERC20Permit("WorldMillion") {
+    constructor() ERC20("WorldProtocol", "WRLD") ERC20Permit("WorldProtocol", "WRLD") BasicMetaTransaction(") {
         // Premint = 10000000 (changable)
         // decimals = 18 (we can change that in constructor)
         _mint(msg.sender, 10000000 * 10 ** decimals());
