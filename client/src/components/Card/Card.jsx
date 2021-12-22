@@ -1,10 +1,10 @@
 
 import './card.css'
 import Tilt from 'react-parallax-tilt';
-import photos1 from "./photos/io.jpeg"
-import photos2 from "./photos/19.png"
-import photos3 from "./photos/hector.jpg"
-import photos4 from "./photos/photos4.jpg";
+import photos1 from "./photos/dq.png";
+import photos2 from "./photos/dq.png"
+import photos3 from "./photos/dq.png"
+import photos4 from "./photos/dq.png";
 
 
 export default function Card () {

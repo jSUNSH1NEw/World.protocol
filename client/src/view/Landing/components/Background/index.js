@@ -7,13 +7,13 @@ import AppBar from '@mui/material/AppBar';
 
 function Background() {
     return (
-        <AppBar position="fixed">
+       
         <div className="landing-background">
             <div className="landing-background-blobs-top">
                 <img alt="" src={BlobsTop} />
             </div>
         </div>
-        </AppBar>
+        
     );
 }
 

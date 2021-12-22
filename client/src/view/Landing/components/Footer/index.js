@@ -72,10 +72,6 @@ function Footer() {
                 </Grid>
             </Grid>
         </Box>
-
-        <Box sx={{ flexGrow: 1 }}>
-        <img alt="" src={Background} />
-        </Box>
         </div>
     );
 }

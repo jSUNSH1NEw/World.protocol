@@ -9,7 +9,7 @@ import { Paper, Link } from "@mui/material";
 
 import WRLDIcon  from "../../../../assets/icon/LogoDesigne.png";
 import Card from "../../../../components/Card/Card.jsx";
-
+import TimeLine from "./components/timeLine.jsx";
 
 
 const Linked = styled(Paper)(({ theme }) => ({
@@ -85,6 +85,15 @@ function Main() {
             <div className="landing-main-card-wrap">
                 <Card />
             </div>
+
+            <div className="roadmap-title">
+                <p>Roadmap</p>
+            </div>
+            <div className="landing-main-roadmap-wrap">
+                <TimeLine />
+            </div>
+
+
                 
         </div>
     );

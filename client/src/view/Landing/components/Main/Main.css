@@ -84,6 +84,19 @@
     font-size: 23px;
     color: #fff;
 }
+.roadmap-title {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+.roadmap-title p {
+    font-family: RedRose Light;
+    font-style: bold;
+    font-weight: 500;
+    font-size: 23px;
+    color: #fff;
+}
 
 
 
@@ -93,7 +106,17 @@
     align-items: center;
     justify-content: center;
     margin-top: 5px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+    z-index: 2;
+}
+.landing-main-roadmap-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    z-index: 2;
 }
 
 

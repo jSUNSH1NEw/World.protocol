@@ -38,17 +38,19 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor:'rgba(255,255,255,0.0) ', boxShadow:'0'}}>
+    <AppBar position="static" sx={{ backgroundColor:'rgba(255,255,255,0.0) ', boxShadow:'0', zIndex:'1',}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
+
+        <img className='logos' src={WRLDIcon} />   
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 20, display: { xs: 'none', md: 'flex' } }}
-          >
-                <img className='logo' src={WRLDIcon} />    
+            sx={{ ml: 127, display: { xs: 'none', md: 'flex' } }}
+          >         
           </Typography>
+          
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -68,7 +70,7 @@ const ResponsiveAppBar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 5, color: 'white', display: 'block' }}
               >
                 {page}
               </Button>
@@ -78,7 +80,7 @@ const ResponsiveAppBar = () => {
               <Typography
                 noWrap
                 component="div"
-                sx={{ mr: 0, display: { xs: 'none', md: 'flex', color:'white' } }}
+                sx={{ ml: 1, display: { xs: 'none', md: 'flex', color:'white' } }}
                 >
                 SOCIAL
           </Typography>

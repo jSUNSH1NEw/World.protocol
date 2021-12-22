@@ -4,17 +4,21 @@
     right: 0;
     left: 0;
     bottom: 0;
+    z-index: 0;
 }
 .landing-background .landing-background-blobs-top {
-    position: absolute;
+    position: fixed;
     right: -0px;
     opacity: 0.4;
-    z-index: 1;
+    z-index: 0;
 }
 .landing-background .landing-background-blobs-top img {
     width: 784px;
     height: 897px;
+    z-index: 0;
 }
+
+
 @media screen and (max-width: 1200px) {
     .landing-background {
         display: none;

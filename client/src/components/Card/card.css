@@ -1,11 +1,13 @@
 :root {
     --surface-color: #fff;
     --curve: 40;
+    z-index: 10;
   }
   
   body {
     font-family: 'Noto Sans JP', sans-serif;
     background-color: #fef8f8;
+    z-index: 10;
   }
   
   
@@ -19,6 +21,7 @@
     margin: 4rem 5vw;
     padding: 0;
     list-style-type: none;
+    z-index: 10;
   }
   
   .card {
@@ -29,11 +32,13 @@
     border-radius: calc(var(--curve) * 1px);
     overflow: hidden;
     text-decoration: none;
+    z-index: 10;
   }
   
   .card__image {      
     width: 100%;
     height: auto;
+    z-index: 10;
   }
   
   .card__overlay {
@@ -46,6 +51,7 @@
     background-color: var(--surface-color);      
     transform: translateY(100%);
     transition: .2s ease-in-out;
+    z-index: 10;
   }
   
   .card:hover .card__overlay {

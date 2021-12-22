@@ -1,5 +1,5 @@
 .landing-footer {
-    width: 50%;
+    width: 100%;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -29,5 +29,19 @@
     font-size: 30px;
     color: #fff;
 }
+.footimg {
+    width: 120px;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
 
 

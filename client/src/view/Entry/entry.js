@@ -1,6 +1,5 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
+import { Avatar,Button } from '@mui/material/';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -12,12 +11,16 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import './entry.css';
+
+import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
+
 
 function Copyright(props) {
   return (
     <Typography variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
+      <Link color="inherit" href="">
         World.protocol
       </Link>{' '}
       {new Date().getFullYear()}
@@ -45,21 +48,35 @@ export default function SignInSide() {
         <CssBaseline />
         <Grid
           item
-          xs={false}
+          xs={true}
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://i.ibb.co/hLRVyVH/cwOThC.webp)',
-            backgroundRepeat: 'no-repeat',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
+            backgroundColor: 'black',
+          }}xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+            <Typography  component="h1" variant="h5"
+              sx={{
+              color: 'white',
+              }}>
+              System used for stop metamask hijack / scam  
+            </Typography>
+
+            <Typography  component="h3"
+              sx={{
+              color: 'white',
+              }}>
+              We need you to drop a external nonn metamask wallet for the wallet receveir input
+            </Typography>
+            <Grid container> 
+            <img className='logo' src={WRLDLogo} />   
+            </Grid>
+          </Grid>
+        
            
         <Grid
          item sx={{
             backgroundColor: '#FFFFFF',
-         }} xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+         }} xs={false} sm={4} md={7} component={Paper} elevation={6} square>
           <Box
             sx={{
               my: 8,
@@ -70,36 +87,32 @@ export default function SignInSide() {
               color: 'black',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'black' }}>
-              <LockOutlinedIcon />
-            </Avatar>
             <Typography  component="h1" variant="h5">
               Create your
             </Typography>
             <Typography component="h1" variant="h5">
              NFT authentification ticket
             </Typography>
-            <Box sx={{ m: 1, bgcolor: 'white' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box  id="box" sx={{ m: 1, bgcolor: 'white' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+              <div className='marge'></div>
               <TextField
                 margin="normal"
-                required
-                fullWidth
                 id="username"
-                label="Username"
-                name="Username"
+                label="username"
+                name="username"
+                type="username"
                 autoComplete="Username"
                 autoFocus
               />
+              <div className='marge'></div>
               <TextField
-                margin="normal"
-                required
-                fullWidth
+                id="walletreceveir"
                 name="walletReceveir"
-                label="Wallet receveir"
-                type="walletReceveir"
-                id="walletReceveir"
+                label="External non-metamask wallet receveir"
+                type="WalletReceveir"
                 autoComplete="External (non-metamask) Avax Wallet "
               />
+              <div className='margecontrol'></div>
               <FormControlLabel
               
                 control={<Checkbox value="remember" color="primary" />}

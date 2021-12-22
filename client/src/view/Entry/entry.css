@@ -1,0 +1,37 @@
+.logo {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 100px;
+
+}
+
+#box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+
+#username {
+    margin-right: 260px;
+}
+
+#walletreceveir {
+    margin-right: 260px;
+                
+}
+.marge {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.margecontrol {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

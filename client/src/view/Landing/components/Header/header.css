@@ -8,8 +8,9 @@
     z-index: 10;
 }
 
-.logo {
-    height: 50px;
+.logos {
+    height: 75px;
+    width: 85px;
 }
 
 .landing-header .landing-header-nav-wrap {
