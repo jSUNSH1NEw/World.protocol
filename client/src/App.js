@@ -4,21 +4,21 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import './assets/css/index.css';
+
 import Landing from "./view/Landing/landing";
 import Entryticket from "./view/Entry/entry";
+import BuyContract from "./view/BuyContract/buyContract";
 
-//import entry ticket and 
-// create route <Route path="/entryTicket" component={Entryticket} />
-
+import './assets/css/index.css';
 
 function App() {
 
   return (
       <Router>
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/entryTicket" element={<Entryticket />} />
+          <Route exact path="/" element={<Landing />} />
+          <Route exact path="/entry" element={<Entryticket />} />
+          <Route exact path="/buyContract" element={<BuyContract />} />
         </Routes>
       </Router>
   );

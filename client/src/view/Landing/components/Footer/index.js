@@ -1,6 +1,8 @@
 import React from "react";
 import { styled } from '@mui/material/styles';
 import { Box, Paper, Grid } from "@mui/material";
+
+//Import for trim  ipfs data 
 //import redux 
 //import { IReduxState } from "../../../../store/slices/state.interface";
 //import { trim } from "../../../../helpers";

@@ -1,17 +1,20 @@
 import { useEffect, useRef, useState, useImperativeHandle, forwardRef  } from "react";
-import "./Main.css";
 import { gsap } from "gsap";
 import Tilt from 'react-parallax-tilt';
 import { styled } from '@mui/material/styles';
-import { Paper, Link } from "@mui/material";
+import { Paper } from "@mui/material";
+import { Link } from 'react-router-dom';
 
-
-
+//Component import 
 import WRLDIcon  from "../../../../assets/icon/LogoDesigne.png";
-import Card from "../../../../components/Card/Card.jsx";
+import Card from "./components/Card/Card.jsx";
 import TimeLine from "./components/timeLine.jsx";
 
+// CSS import 
+import "./Main.css";
 
+
+// CSS rules over styled with MUI 
 const Linked = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     fontFamily: 'Montserrat Bold',
@@ -20,21 +23,21 @@ const Linked = styled(Paper)(({ theme }) => ({
     fontSize: '15px',
     lineHeight: '22px',
     color:'rgb(0, 0, 0)',
-  
   }));
   
-
-
 function Main() {
+
+    // GSAP animation TESTING
+
   // store a reference to the box div
  // const boxRef = useRef();
-
   // wait until DOM has been rendered
  // useEffect(() => {
    // gsap.to(boxRef.current, { rotation: "+=360" });
   //});
-
   // with this  <div className="box" ref={boxRef}>Hello</div> <!--- 
+
+   // const navigate = useNavigate();
 
 
     return (
@@ -59,24 +62,23 @@ function Main() {
             </div>
 
             <div className="landing-main-btns-wrap">
-                <Link href="https://WorldMillions.gitbook.io/WorldFinance/" target="_blank" rel="noreferrer">
+                <a href="https://WorldMillions.gitbook.io/WorldFinance/" target="_blank" rel="noreferrer">
                     <div className="landing-main-btn">
                         <p>HOW IT WORK</p>
                     </div>
-                </Link>
+                </a>
                 
-                <Link href="https://WorldMillions.gitbook.io/WorldFinance/" target="_blank" rel="noreferrer">
+                <a href="https://WorldMillions.gitbook.io/WorldFinance/" target="_blank" rel="noreferrer">
                     <div className="landing-main-btn">
                         <p>DOCUMENTATIONS</p>
                     </div>
-                </Link>
-
-              
-                <Link href="" target="_blank" rel="noreferrer">
+                </a>
+                
                     <div className="landing-main-btn">
-                        <p>ENTRY TICKET</p>
+                    <Link to="/entry"> <p>ENTRY TICKET</p> </Link>
                     </div>
-                </Link>
+                
+                
             </div>
 
             <div className="Team-title">
