@@ -45,7 +45,7 @@
   -  [@JSUNSH1NEw](https://twitter.com/JSUNSH1NEw) Creator full-stack and founder of `#WorldProtocol`
 
 - :man_with_gua_pi_mao: Samuel Dhayeng
-  -  [@tom_ferguson](https://twitter.com/wrld_token) Smart-contract developer of `#WorldProtocol`
+  -  [@samuel_ko](https://twitter.com/samuel_ys92) Smart-contract developer of `#WorldProtocol`
   
 - :speech_balloon: Malima Anthony
   -  [@Malima_anthony](https://twitter.com/wrld_token) Commercial advisor of `#WorldProtocol`
