@@ -7,7 +7,7 @@ import {
 
 import Landing from "./view/Landing/landing";
 import Entryticket from "./view/Entry/entry";
-import BuyContract from "./view/BuyContract/buyContract";
+import BuyContract from "./view/BuyContract/buyContracts";
 
 import './assets/css/index.css';
 
@@ -17,8 +17,8 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Landing />} />
-          <Route exact path="/entry" element={<Entryticket />} />
-          <Route exact path="/buyContract" element={<BuyContract />} />
+          <Route path="/entryContract" element={<Entryticket />} />
+          <Route path="/buyContract" element={<BuyContract />} />
         </Routes>
       </Router>
   );

@@ -46,6 +46,7 @@
 .landing-main .landing-main-btns-wrap {
     display: flex;
     flex-direction: row;
+
 }
 .landing-main .landing-main-btns-wrap a {
     text-decoration: none;
@@ -53,23 +54,41 @@
 
 
 .landing-main .landing-main-btns-wrap .landing-main-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 0 11px;
     padding: 2px 30px 2px 30px;
-    min-width: 50px;
-    background: #ffffff;
-    box-shadow: 0px 0px 10px rgba(44, 39, 109, 0.1);
+    min-width: 35px;
+    height: 37px;
+    background: white;
+    box-shadow:
+    0 0 10px #fff,            /* outer white */
+    -5px 0 10px rgb(82, 229, 255),        /* outer left magenta */
+    5px 0 10px rgb(18, 43, 80);         /* outer right cyan */
     border-radius: 27px;
     cursor: pointer;
     text-align: center;
 }
+.landing-main .landing-main-btns-wrap .landing-main-btn:hover  {
+    transition-duration: 0.3s;
+    box-shadow:
+    0 0 10px #fff,            /* outer white */
+    -9px 0 9px #a0a6ff,        /* outer left magenta */
+    9px 0 9px rgb(255, 240, 156);         /* outer right cyan */
+}
+
+
+
 .landing-main .landing-main-btns-wrap .landing-main-btn p {
     font-family: Montserrat Bold;
     font-style: normal;
     font-weight: 300;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22px;
     color: rgb(0, 0, 0);
 }
+
 
 .Team-title {
     flex-direction: column;

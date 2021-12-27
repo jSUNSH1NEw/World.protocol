@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom'
-import { Avatar,Button,CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box, Grid, Typography, createTheme, ThemeProvider } from '@mui/material/';
+import { Avatar,Button,CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box, Grid, Typography, createTheme, ThemeProvider,Link  } from '@mui/material/';
+import { useNavigate } from 'react-router-dom';
+
 
 import './entry.css';
 import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
@@ -20,6 +21,10 @@ function Copyright(props) {
 }
 
 const theme = createTheme();
+const Confirm = (e) => {
+  const navigate = useNavigate();
+  navigate('/buyContract');
+}
 
 export default function SignInSide() {
   const handleSubmit = (event) => {
@@ -95,6 +100,7 @@ export default function SignInSide() {
                 autoFocus
               />
               <div className='marge'></div>
+
               <TextField
                 id="walletreceveir"
                 name="walletReceveir"
@@ -108,7 +114,7 @@ export default function SignInSide() {
                 control={<Checkbox value="remember" color="primary" />}
                 label="Accept the DAO system"
               />
-                <Link href="#" variant="body2">
+                <Link variant="body2">
                     Read lite paper 
                 </Link>
 
@@ -118,8 +124,11 @@ export default function SignInSide() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2, bgcolor: 'black' }}
+                onClick={(e) => Confirm(e)}
               >
-                CREATE YOUR TICKET 
+                <Link href="/buyContract">
+                   <p>CREATE YOUR TICKET</p>
+                </Link>
               </Button>
               <Copyright sx={{ mt: 5 }} />
             </Box>

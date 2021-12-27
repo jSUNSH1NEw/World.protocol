@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import Tilt from 'react-parallax-tilt';
 import { styled } from '@mui/material/styles';
 import { Paper } from "@mui/material";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 //Component import 
 import WRLDIcon  from "../../../../assets/icon/LogoDesigne.png";
@@ -73,11 +73,11 @@ function Main() {
                         <p>DOCUMENTATIONS</p>
                     </div>
                 </a>
-                
+                    
                     <div className="landing-main-btn">
-                    <Link to="/entry"> <p>ENTRY TICKET</p> </Link>
+                    <Link to="/entryContract"> <p>ENTRY TICKET</p> </Link>
                     </div>
-                
+                    
                 
             </div>
 
