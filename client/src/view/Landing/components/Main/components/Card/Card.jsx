@@ -1,4 +1,4 @@
-
+import { Element } from 'react-scroll'
 import './card.css'
 import Tilt from 'react-parallax-tilt';
 import photos1 from "./photos/dq.png";
@@ -10,6 +10,7 @@ import photos4 from "./photos/dq.png";
 export default function Card () {
     
     return(
+<Element id='teams' name='teams'>
 <ul class="cards">
 <Tilt>
   <li>
@@ -85,5 +86,6 @@ export default function Card () {
   </li>
   </Tilt>    
 </ul>
+</Element>
     )
 }

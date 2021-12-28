@@ -82,7 +82,9 @@ export default function SignInSide() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2, bgcolor: 'black' }}
               >
-                BUY AND PRINT YOUR NFT CONTRACT
+                <Link href="/app">
+                  <Typography variant="h5" component="h2" sx={{ color: 'white' }}> BUY AND PRINT YOUR NFT CONTRACT</Typography>
+                </Link>
               </Button>
               <Copyright sx={{ mt: 5 }} />
             </Box>

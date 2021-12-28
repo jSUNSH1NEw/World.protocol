@@ -12,6 +12,12 @@
     height: 75px;
     width: 85px;
 }
+.logos2 {
+    height: 25px;
+    width: 27px;
+    display: flex;
+    justify-content: center;
+}
 
 .landing-header .landing-header-nav-wrap {
     margin-left: auto;
