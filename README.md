@@ -42,7 +42,7 @@
 
 
 - :guardsman: Joffrey Weertz 
-  -  [@JSUNSH1NEw](https://twitter.com/JSUNSH1NEw) full-stack developer and founder of `#WorldProtocol`
+  -  [@JSUNSH1NEw](https://twitter.com/JSUNSH1NEw) FULL-STACK developer and founder of `#WorldProtocol`
 
 - :man_with_gua_pi_mao: Samuel Dhayeng
   -  [@samuel_ko](https://twitter.com/samuel_ys92) Smart-contract developer and security advisor of `#WorldProtocol`
@@ -50,8 +50,6 @@
 - :speech_balloon: Malima Anthony
   -  [@Malima_anthony](https://twitter.com/wrld_token) Commercial advisor of `#WorldProtocol`
 
-- :japanese_ogre: Hector Ruiz
-  -  [@Hector_ruiz](https://twitter.com/wrld_token) Front-end developer `#WorldProtocol`
 
 
 
