@@ -6,16 +6,24 @@ import Main from "./components/Main/index.js";
 import Background from "./components/Background/index.js";
 import Footer from "./components/Footer/index.js";
 
-// CSS STYLES OVERRIDE
-import "./landing.css";
+import styled from "styled-components";
+
+const StyledDiv = styled.div`
+width: 100%;
+background: rgb(0, 0, 0);
+display: flex;
+flex-direction: column;
+`;
+
+
 function Landing() {
     return (
-        <div className="landing-root">
+        <StyledDiv>
             <Header />
             <Main />
             <Background />
             <Footer />
-        </div>
+        </StyledDiv>
     );
 }
 
