@@ -1,10 +1,17 @@
 import * as React from 'react';
 import {AppBar, Box, CssBaseline, Divider, Drawer,IconButton, List, Toolbar, Typography, Accordion, AccordionSummary, AccordionDetails, Button} from '@mui/material';
-import { Link } from "react-router-dom";
+import { Link, Routes, Route } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
+import Dashboard from '../Dashboard/index.js';
+import Calculator from '../Calculator/index.js';
+import Stake from '../Stake/index.js';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import WRLDIcon from "../../../../assets/icon/coin.png";
+import './drawer.css';
+
 const drawerWidth = 240;
+
+
 
 function ResponsiveDrawer(props) {
     const { window } = props;
@@ -19,17 +26,17 @@ function ResponsiveDrawer(props) {
             <Toolbar />
             <img className='logos' src={WRLDIcon} />   
             <List>
-            <Button>
-                    <Link to="/app/dashboard">
+                <Button>
+                    <Link to="dashboard">
                         <Typography>Dashboard</Typography>
-                    </Link>
-            </Button>
+                    </Link>{" "}
+                </Button>
             </List>
 
             <Divider />
             <List>
             <Button>
-                    <Link to="/app/Calculator">
+                    <Link to="Calculator">
                         <Typography>Calculator</Typography>
                     </Link>
             </Button>
@@ -37,7 +44,7 @@ function ResponsiveDrawer(props) {
             <Divider />
             <List>
                 <Button>
-                    <Link to="/app/Stake">
+                    <Link to="stake">
                         <Typography>Stake</Typography>
                     </Link>
                 </Button>
@@ -55,7 +62,7 @@ function ResponsiveDrawer(props) {
                     <AccordionDetails>
                     </AccordionDetails>
                     <AccordionDetails>
-                    <Link to="/app/mint/wavelp">
+                    <Link to="wavelp">
                         <Typography>wAVE / WRLD </Typography>
                     </Link>
                     </AccordionDetails>
@@ -87,12 +94,14 @@ function ResponsiveDrawer(props) {
                     </AccordionDetails>
                 </Accordion>
             </List>
+            
         </div>
     );
 
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
+        <div className='routedSideAppbar'>
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar
@@ -103,7 +112,8 @@ function ResponsiveDrawer(props) {
                     backgroundColor:'rgba(255,255,255,0.0) ',
                 }}
             >
-                <Toolbar>
+                
+                <Toolbar sx={{ display:'spaceBetween'}}>
                     <IconButton
                         color="inherit"
                         aria-label="open Sidebar"
@@ -115,7 +125,7 @@ function ResponsiveDrawer(props) {
                     </IconButton>
                     <Typography variant="h6" noWrap component="div"
                     sx={{ color:'black' }}>
-                        Your Dashboard 
+                         # Name of the component
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -156,14 +166,22 @@ function ResponsiveDrawer(props) {
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <Toolbar />
-                <Typography paragraph>
-                    TRIMED APY LIKLE FOOTER 
-                </Typography>
-                <Typography paragraph>
-                    THERE IS THE COMPONENT SWITCHING BY ROOT ! 
-                </Typography>
             </Box>
         </Box>
+
+        <Box className='routerDrawer'> 
+            <Routes>
+                <Route path="dashboard" element={<Dashboard />} />
+            </Routes>
+            <Routes>
+                <Route path="calculator" element={<Calculator />} />
+            </Routes>
+            <Routes>
+                <Route path="stake" element={<Stake />} />
+            </Routes>
+        </Box>
+        </div>
+
     );
 }
 

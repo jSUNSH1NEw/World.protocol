@@ -1,6 +1,5 @@
 import * as React from 'react';
-import Scroll from 'react-scroll';
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem , InputBase} from '@mui/material';
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem , InputBase, Link} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import './header.css';
@@ -30,7 +29,6 @@ const ResponsiveAppBar = () => {
   };
 
  //Scrolable links for the header
-const ScrollLink = Scroll.ScrollLink
 
   //Styled Components MUI
 
@@ -113,7 +111,7 @@ const ScrollLink = Scroll.ScrollLink
             <StyledInputBase
               data="Our prices"
               inputProps={{ 'aria-label': 'search' }}
-            > 0.16 $</StyledInputBase>
+            > 0.160 $</StyledInputBase>
           
           
           <Typography
@@ -167,11 +165,12 @@ const ScrollLink = Scroll.ScrollLink
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+              
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link href="https://weertz-joffrey.gitbook.io/world.protocol/">
+                    <Typography textAlign="center">GitHub</Typography>
+                  </Link>
                 </MenuItem>
-              ))}
             </Menu>
           </Box>
           

@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/" element={<Landing />} />
           <Route path="/entryContract" element={<Entryticket />} />
           <Route path="/buyContract" element={<BuyContract />} />
-          <Route path="/app" element={<Dapps />} />
+          <Route path="/app/*" element={<Dapps />} />
         </Routes>
       </Router>
   );
