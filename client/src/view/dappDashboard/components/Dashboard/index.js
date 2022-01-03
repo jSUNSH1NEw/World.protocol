@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
-import { Box, Toolbar, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 // COMPONENTS IMPORT
+import { StyledDiv } from './dash.styles';
 
-// CSS STYLES ROOT OVERRIDE
 
 const drawerWidth = 240;
 
@@ -13,8 +13,9 @@ const drawerWidth = 240;
 
 function XDashboard() {
     return (
-        <div>
+        <StyledDiv>
             <Box
+                className="dashboard-container"
                 component="main1" // Main content need to be changed based on the component you want to render
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
             >
@@ -24,6 +25,7 @@ function XDashboard() {
             </Box>
 
             <Box
+                className="dashboard-container2"
                 component="main2" 
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
             >
@@ -31,20 +33,26 @@ function XDashboard() {
                     trimed treasury  
                 </Typography>
             </Box>
+
             <Box
+                className="dashboard-container3"
                 component="main3" 
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
-            >
-                <Typography paragraph sx= {{ width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
-                    trimed apy
-                </Typography>
+            >   
+                <Box
+                sx={{width: '200px', height :'100px' , backgroundColor: 'whiteSmoke'}}
+                >
+                    <Typography paragraph >
+                        trimed apy
+                    </Typography>
+                </Box>
             </Box>
 
 
             <Routes>
                 <Route path=":id" element={<XDashboard/>} />
             </Routes>
-        </div>
+        </StyledDiv>
     );
 }
 

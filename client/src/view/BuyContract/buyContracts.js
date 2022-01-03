@@ -44,7 +44,7 @@ export default function SignInSide() {
             backgroundColor: 'black',
           }}xs={12} sm={8} md={5} component={Paper} elevation={6} square>
             <Grid container> 
-            <img className='logo' src={WRLDLogo} />   
+            <img className='logo' src={WRLDLogo} alt="Logo of world" />   
             </Grid>
           </Grid>
         

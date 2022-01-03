@@ -1,36 +1,34 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
-import { Box, Toolbar, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 // COMPONENTS IMPORT
+import { StyledDiv } from './stake.styles';
 
 const drawerWidth = 240;
 
-// CSS STYLES ROOT OVERRIDE
 
 
 function Staking() {
     return (
-        <div className="Staking-root">
+        <StyledDiv>
             <Box
                 component="main" // Main content need to be changed based on the component you want to render
                 sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
             >
-                <Typography paragraph>
-                    Staking component 
-                </Typography>
+               <Box
+               sx={{ flexGrow: 1, p: 2, width: '250px', height :'100px'}}
+               >
+                    <Typography paragraph>
+                        Staking COMPONENT
+                    </Typography>
+                </Box> 
             </Box>
 
-
-            <Box
-                component="main" // Main content need to be changed based on the component you want to render
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
-            >
-            </Box>
 
             <Routes>
                 <Route path=":id" element={<Staking/>} />
             </Routes>
-        </div>
+        </StyledDiv>
     );
 }
 

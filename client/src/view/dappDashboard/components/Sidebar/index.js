@@ -7,8 +7,8 @@ import Calculator from '../Calculator/index.js';
 import Stake from '../Stake/index.js';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import WRLDIcon from "../../../../assets/icon/coin.png";
-import './drawer.css';
 
+import { StyledImg, StyledDiv, StyledLink } from './drawer.style';
 const drawerWidth = 240;
 
 
@@ -22,34 +22,38 @@ function ResponsiveDrawer(props) {
     };
 
     const Sidebar = (
-        <div className='Sidebar'>
+        <div>
             <Toolbar />
-            <img className='logos' src={WRLDIcon} />   
+            <StyledImg className='logos' src={WRLDIcon}  alt="Icon of World protocol in the Dapps of world protocol" />   
+            <Divider sx={{ marginBottom: '50px'}} />
             <List>
                 <Button>
-                    <Link to="dashboard">
+                    <StyledLink to="dashboard">
                         <Typography>Dashboard</Typography>
-                    </Link>{" "}
+                    </StyledLink>{" "}
                 </Button>
             </List>
-
-            <Divider />
             <List>
             <Button>
-                    <Link to="Calculator">
+                    <StyledLink to="Calculator">
                         <Typography>Calculator</Typography>
-                    </Link>
+                    </StyledLink>
             </Button>
             </List>
-            <Divider />
             <List>
                 <Button>
-                    <Link to="stake">
+                    <StyledLink to="stake">
                         <Typography>Stake</Typography>
-                    </Link>
+                    </StyledLink>
                 </Button>
             </List>
-            <Divider />
+            <List>
+                <Button>
+                    <StyledLink to="personnalWallet">
+                        <Typography >Personnal Wallet</Typography>
+                    </StyledLink>
+                </Button>
+            </List>
             <List>
                 <Accordion>
                     <AccordionSummary
@@ -62,9 +66,9 @@ function ResponsiveDrawer(props) {
                     <AccordionDetails>
                     </AccordionDetails>
                     <AccordionDetails>
-                    <Link to="wavelp">
+                    <StyledLink to="wavelp">
                         <Typography>wAVE / WRLD </Typography>
-                    </Link>
+                    </StyledLink>
                     </AccordionDetails>
                 </Accordion>
             </List>
@@ -79,18 +83,18 @@ function ResponsiveDrawer(props) {
                         <Typography>Documentations</Typography>
                     </AccordionSummary>
                     <AccordionDetails>
-                        <Link to=""> 
-                        <Typography>
-                            Gitbooks
-                        </Typography>
-                        </Link>
+                        <StyledLink to=""> 
+                            <Typography>
+                                Gitbooks
+                            </Typography>
+                        </StyledLink>
                     </AccordionDetails>
                     <AccordionDetails>
-                        <Link to=""> 
-                        <Typography>
-                            Our github readme
-                        </Typography>
-                        </Link>
+                        <StyledLink to=""> 
+                            <Typography>
+                                GitHub Readme
+                            </Typography>
+                        </StyledLink>
                     </AccordionDetails>
                 </Accordion>
             </List>
@@ -101,7 +105,7 @@ function ResponsiveDrawer(props) {
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
-        <div className='routedSideAppbar'>
+        <StyledDiv>
         <Box sx={{ display: 'flex' }}>
             <CssBaseline />
             <AppBar
@@ -113,7 +117,7 @@ function ResponsiveDrawer(props) {
                 }}
             >
                 
-                <Toolbar sx={{ display:'spaceBetween'}}>
+                <Toolbar sx={{ backgroundColor:'black'}}>
                     <IconButton
                         color="inherit"
                         aria-label="open Sidebar"
@@ -121,11 +125,11 @@ function ResponsiveDrawer(props) {
                         onClick={handleDrawerToggle}
                         sx={{ mr: 2, display: { sm: 'none' } }}
                     >
-                        <MenuIcon sx={{ color: 'black'}} />
+                        <MenuIcon sx={{ color: 'white'}} />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div"
-                    sx={{ color:'black' }}>
-                         # Name of the component
+                    sx={{ color:'white', alignItems:'center', justifyItems:'flex-end' }}>
+                         $greeting + $username 
                     </Typography>
                 </Toolbar>
             </AppBar>
@@ -144,8 +148,10 @@ function ResponsiveDrawer(props) {
                         keepMounted: true, // Better open performance on mobile.
                     }}
                     sx={{
+                        
                         display: { xs: 'block', sm: 'none' },
                         '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        
                     }}
                 >
                     {Sidebar}
@@ -180,7 +186,7 @@ function ResponsiveDrawer(props) {
                 <Route path="stake" element={<Stake />} />
             </Routes>
         </Box>
-        </div>
+        </StyledDiv>
 
     );
 }

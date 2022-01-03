@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Avatar,Button,CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box, Grid, Typography, createTheme, ThemeProvider,Link  } from '@mui/material/';
+import { Button,CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box, Grid, Typography, createTheme, ThemeProvider,Link  } from '@mui/material/';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -63,7 +63,7 @@ export default function SignInSide() {
               We need you to drop a external nonn metamask wallet for the wallet receveir input
             </Typography>
             <Grid container> 
-            <img className='logo' src={WRLDLogo} />   
+            <img className='logo' src={WRLDLogo} alt="Logo of world protocol" />   
             </Grid>
           </Grid>
         

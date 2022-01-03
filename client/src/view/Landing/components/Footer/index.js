@@ -6,7 +6,6 @@ import { Box, Paper, Grid } from "@mui/material";
 //import redux 
 //import { IReduxState } from "../../../../store/slices/state.interface";
 //import { trim } from "../../../../helpers";
-import Background from "./img/dd.png"
 
 
 const Item = styled(Paper)(({ theme }) => ({

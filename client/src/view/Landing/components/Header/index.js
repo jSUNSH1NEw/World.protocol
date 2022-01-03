@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem , InputBase, Link} from '@mui/material';
+import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, Tooltip, MenuItem , Link} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import './header.css';
@@ -7,7 +7,6 @@ import WRLDIcon from "../../../../assets/icon/coin.png";
 
 
 const pages = ['Our Team','Roadmap'];
-const settings = ['Github', 'Tweeter'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -81,7 +80,7 @@ const ResponsiveAppBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
-        <img className='logos' src={WRLDIcon} />   
+        <img className='logos' src={WRLDIcon} alt="Logo of world protocol" />   
           <Typography
             variant="h6"
             noWrap
@@ -105,7 +104,7 @@ const ResponsiveAppBar = () => {
           </Box>
           <Search>
             <SearchIconWrapper> 
-              <img className='logos2' src={WRLDIcon} />    
+              <img className='logos2' src={WRLDIcon} alt='Logo of world into the navbar' />    
             </SearchIconWrapper> 
 
             <StyledInputBase

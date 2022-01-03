@@ -1,4 +1,3 @@
-import { useEffect, useCallback } from "react";
 import {
   BrowserRouter as Router,
   Routes,

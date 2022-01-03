@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
-import { Box, Toolbar, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 // COMPONENTS IMPORT
 
 const drawerWidth = 240;
@@ -10,20 +10,14 @@ const drawerWidth = 240;
 
 function Calculator() {
     return (
-        <div className="Calculator-root">
+        <div>
             <Box
-                component="main" // Main content need to be changed based on the component you want to render
+                component="main"
+                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - 240px)` }}} // Main content need to be changed based on the component you want to render
             >
                 <Typography paragraph>
                     calculator COMPONENT
                 </Typography>
-            </Box>
-
-
-            <Box
-                component="main" // Main content need to be changed based on the component you want to render
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
-            >
             </Box>
 
             <Routes>

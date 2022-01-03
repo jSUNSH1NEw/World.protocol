@@ -1,8 +1,4 @@
-import { useEffect, useRef, useState, useImperativeHandle, forwardRef  } from "react";
-import { gsap } from "gsap";
 import Tilt from 'react-parallax-tilt';
-import { styled } from '@mui/material/styles';
-import { Paper } from "@mui/material";
 import { Link } from "react-router-dom";
 
 //Component import 
@@ -13,32 +9,8 @@ import TimeLine from "./components/timeLine.jsx";
 // CSS import 
 import "./Main.css";
 
-
-// CSS rules over styled with MUI 
-const Linked = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    fontFamily: 'Montserrat Bold',
-    fontStyle: 'normal',
-    fontWeight: '300',
-    fontSize: '15px',
-    lineHeight: '22px',
-    color:'rgb(0, 0, 0)',
-  }));
   
 function Main() {
-
-    // GSAP animation TESTING
-
-  // store a reference to the box div
- // const boxRef = useRef();
-  // wait until DOM has been rendered
- // useEffect(() => {
-   // gsap.to(boxRef.current, { rotation: "+=360" });
-  //});
-  // with this  <div className="box" ref={boxRef}>Hello</div> <!--- 
-
-   // const navigate = useNavigate();
-
 
     return (
         <div className="landing-main">
