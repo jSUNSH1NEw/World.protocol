@@ -1,3 +1,4 @@
+
 .logo {
     width: 50%;
     height: 50%;
@@ -32,6 +33,11 @@
 }
 
 .margecontrol {
-    margin-top: 20px;
+    margin-top: 11px;
     margin-bottom: 30px;
+}
+
+.margecontrol2 {
+    margin-top: 11px;
+
 }

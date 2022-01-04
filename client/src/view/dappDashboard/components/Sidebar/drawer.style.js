@@ -3,7 +3,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { device } from '../../styleHook';
-
+import { FontStyles } from '../../../../assets/css/fontStyles';
 
   
   
@@ -36,13 +36,31 @@ export const StyledImg = styled.img`
     margin-bottom: 40px;
 `;
 
-
-export const StyledLink = styled(Link)`
+export const StyledLi = styled.a`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
   color: black;
   text-decoration: none;
-  margin-right: 5px;
+
+  &:hover {
+  text-decoration: underline;
+}
+
+`;
+
+
+export const StyledLink = styled(Link)`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  color: black;
+  text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
 `;
+

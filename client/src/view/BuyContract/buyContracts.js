@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Button,Grid,CssBaseline,Link,Paper,Box,Typography,createTheme, ThemeProvider} from '@mui/material/';
+import LoadingButton from '@mui/lab/LoadingButton';
 import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
 
 
@@ -21,15 +22,18 @@ function Copyright(props) {
 const theme = createTheme();
 
 export default function SignInSide() {
+  const [loading, setLoading] = React.useState(false);
+  function handleClick() {
+    setLoading(true);
+  }
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
-    console.log({
-      username: data.get('username'),
-      walletReceveir: data.get('walletReceveir'),
-    });
   };
+  
 
   return (
     <ThemeProvider theme={theme}>
@@ -61,6 +65,7 @@ export default function SignInSide() {
               flexDirection: 'column',
               alignItems: 'center',
               color: 'black',
+              fontFamily: 'Montserrat Regular'
             }}
           >
             <Typography  component="h1" variant="h5">
@@ -70,21 +75,22 @@ export default function SignInSide() {
              BY WRLD FOR 
             </Typography>
             <Box  id="box" sx={{ m: 1, bgcolor: 'white' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-              <div className='marge'></div>
-              <div className='marge'></div>
             
-              <div className='margecontrol'></div>
-
-                
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2, bgcolor: 'black' }}
+                sx={{ mt: 3, mb: 2, bgcolor: 'black', }}
               >
+                <LoadingButton
+                onClick={handleClick}
+                loading={loading}
+                loadingIndicator="Loading..."
+                >
                 <Link href="/app">
-                  <Typography variant="h5" component="h2" sx={{ color: 'white' }}> BUY AND PRINT YOUR NFT CONTRACT</Typography>
+                  Buy and print your contract
                 </Link>
+                </LoadingButton>
               </Button>
               <Copyright sx={{ mt: 5 }} />
             </Box>

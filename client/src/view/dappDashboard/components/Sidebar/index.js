@@ -7,11 +7,52 @@ import Calculator from '../Calculator/index.js';
 import Stake from '../Stake/index.js';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import WRLDIcon from "../../../../assets/icon/coin.png";
+import { size } from '../../styleHook';
+import { StyledImg, StyledDiv, StyledLink, StyledLi} from './drawer.style';
+import { styled } from '@mui/material/styles';
+import FontStyles from '../../../../assets/css/fontStyles.js';
 
-import { StyledImg, StyledDiv, StyledLink } from './drawer.style';
-const drawerWidth = 240;
 
+export const LinkedThemed= styled(Link)(({ theme }) => ({
+    margin: theme.spacing(1),
+    display: 'flex',
+    alignItems: 'Left',
+    padding: theme.spacing(0, 5),
+    justifyContent: 'flex-start',
+    textTransform: 'capitalize',
+    textDecoration: 'none',
+    fontFamily: 'Montserrat Regular',
+    fontStyle: 'normal',
+    fontWeight: '420',
+    fontSize: '17px',
+    lineHeight: '22px',
+    color:'rgb(0, 0, 0)',
 
+    '&:hover': {
+        textDecoration: 'underline',
+        Transition: 'all 1.8s ease-in-out',
+        boxShadow: 'none',
+      },
+      '&:active': {
+        boxShadow: 'none',
+      },
+  }));
+
+  export const LinkedDown = styled(List)(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'Left',
+    padding: theme.spacing(0, 4),
+    justifyContent: 'flex-start',
+    textTransform: 'capitalize',
+    textDecoration: 'none',
+    fontFamily: 'Montserrat Regular',
+    fontStyle: 'normal',
+    fontWeight: '300',
+    fontSize: '15px',
+    lineHeight: '22px',
+    color:'rgb(0, 0, 0)',
+
+  }));
 
 function ResponsiveDrawer(props) {
     const { window } = props;
@@ -27,45 +68,38 @@ function ResponsiveDrawer(props) {
             <StyledImg className='logos' src={WRLDIcon}  alt="Icon of World protocol in the Dapps of world protocol" />   
             <Divider sx={{ marginBottom: '50px'}} />
             <List>
-                <Button>
-                    <StyledLink to="dashboard">
-                        <Typography>Dashboard</Typography>
-                    </StyledLink>{" "}
-                </Button>
+
+                    <LinkedThemed to="dashboard">
+                        <Typography >dashboard</Typography>
+                    </LinkedThemed>
+
             </List>
             <List>
-            <Button>
-                    <StyledLink to="Calculator">
-                        <Typography>Calculator</Typography>
-                    </StyledLink>
-            </Button>
+                    <LinkedThemed to="Calculator">
+                        <Typography >calculator</Typography>
+                    </LinkedThemed>
             </List>
             <List>
-                <Button>
-                    <StyledLink to="stake">
-                        <Typography>Stake</Typography>
-                    </StyledLink>
-                </Button>
+                    <LinkedThemed to="Stake">
+                        <Typography >stake</Typography>
+                    </LinkedThemed>
             </List>
             <List>
-                <Button>
-                    <StyledLink to="personnalWallet">
+                    <LinkedThemed to="personnalWallet">
                         <Typography >Personnal Wallet</Typography>
-                    </StyledLink>
-                </Button>
+                    </LinkedThemed>
             </List>
             <List>
-                <Accordion>
+                <Accordion sx={{boxShadow:'none'}}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
-                    >
-                        <Typography>Mint</Typography>
+                        aria-controls="panel1a-content">
+                         <LinkedDown>
+                            <Typography>Mint</Typography>
+                        </LinkedDown>
                     </AccordionSummary>
-                    <AccordionDetails>
-                    </AccordionDetails>
-                    <AccordionDetails>
+
+                    <AccordionDetails sx={{display:'flex', justifyContent:'flex-start', marginLeft: '32px' }}>
                     <StyledLink to="wavelp">
                         <Typography>wAVE / WRLD </Typography>
                     </StyledLink>
@@ -74,27 +108,29 @@ function ResponsiveDrawer(props) {
             </List>
 
             <List>
-                <Accordion>
+                <Accordion sx={{boxShadow:'none'}}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
                         id="panel1a-header"
                     >
-                        <Typography>Documentations</Typography>
+                        <LinkedDown>
+                            <Typography>Documentations</Typography>
+                        </LinkedDown>
                     </AccordionSummary>
-                    <AccordionDetails>
-                        <StyledLink to=""> 
+                    <AccordionDetails sx={{display:'flex', justifyContent:'flex-start', marginLeft: '32px' }}>
+                        <StyledLi href="https://weertz-joffrey.gitbook.io/world.protocol/" target="_blank"> 
                             <Typography>
                                 Gitbooks
                             </Typography>
-                        </StyledLink>
+                        </StyledLi>
                     </AccordionDetails>
-                    <AccordionDetails>
-                        <StyledLink to=""> 
+                    <AccordionDetails sx={{display:'flex', justifyContent:'flex-start', marginLeft: '32px' }}>
+                        <StyledLi href="https://github.com/jSUNSH1NEw/MoralisAvalanchehackathon/blob/main/README.md" target="_blank"> 
                             <Typography>
                                 GitHub Readme
                             </Typography>
-                        </StyledLink>
+                        </StyledLi>
                     </AccordionDetails>
                 </Accordion>
             </List>
@@ -111,13 +147,14 @@ function ResponsiveDrawer(props) {
             <AppBar
                 position="fixed"
                 sx={{
-                    width: { sm: `calc(100% - ${drawerWidth}px)` },
-                    ml: { sm: `${drawerWidth}px` },
+                    width: { sm: `calc(100% - ${size.width}px)` },
+                    ml: { sm: `${size.width}px` },
                     backgroundColor:'rgba(255,255,255,0.0) ',
+                    
                 }}
             >
                 
-                <Toolbar sx={{ backgroundColor:'black'}}>
+                <Toolbar sx={{ backgroundColor:'black', zIndex: (theme) => theme.zIndex.drawer + 1}}>
                     <IconButton
                         color="inherit"
                         aria-label="open Sidebar"
@@ -128,14 +165,14 @@ function ResponsiveDrawer(props) {
                         <MenuIcon sx={{ color: 'white'}} />
                     </IconButton>
                     <Typography variant="h6" noWrap component="div"
-                    sx={{ color:'white', alignItems:'center', justifyItems:'flex-end' }}>
+                    sx={{ color:'white', alignItems:'center', justifyItems:'flex-end', fontFamily: 'Montserrat Bold', }}>
                          $greeting + $username 
                     </Typography>
                 </Toolbar>
             </AppBar>
             <Box
                 component="nav"
-                sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+                sx={{ width: { sm: size.width }, flexShrink: { sm: 0 } }}
                 aria-label="mailbox folders"
             >
                 {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -150,7 +187,7 @@ function ResponsiveDrawer(props) {
                     sx={{
                         
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: size.width },
                         
                     }}
                 >
@@ -160,7 +197,7 @@ function ResponsiveDrawer(props) {
                     variant="permanent"
                     sx={{
                         display: { xs: 'none', sm: 'block' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: size.width },
                     }}
                     open
                 >
@@ -169,7 +206,7 @@ function ResponsiveDrawer(props) {
             </Box>
             <Box
                 component="main"
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${size.width}px)` } }}
             >
                 <Toolbar />
             </Box>

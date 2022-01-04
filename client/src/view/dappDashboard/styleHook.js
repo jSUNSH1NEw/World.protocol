@@ -1,15 +1,17 @@
 import { styled } from '@mui/material/styles';
 import { Paper } from "@mui/material";
 
+
 // this is for mediaquery managment
-  const size = {
+  export const size = {
+    width: 240,
     mobileS: '320px',
     mobileM: '375px',
     mobileL: '425px',
     tablet: '768px',
     laptop: '1024px',
     laptopL: '1440px',
-    desktop: '2560px'
+    desktop: '2560px',
   }
 
   export const device = {
@@ -20,22 +22,9 @@ import { Paper } from "@mui/material";
     laptop: `(min-width: ${size.laptop})`,
     laptopL: `(min-width: ${size.laptopL})`,
     desktop: `(min-width: ${size.desktop})`,
-    desktopL: `(min-width: ${size.desktop})`
+    desktopL: `(min-width: ${size.desktop})`,
+    drawerWidth: `(min-width: ${size.width})`
   };
-
-  export const drawerWidth = 240;
-
-
-  // CSS rules over styled with MUI 
-export const Linked = styled(Paper)(({ theme }) => ({
-  ...theme.typography.body2,
-  fontFamily: 'Montserrat Bold',
-  fontStyle: 'normal',
-  fontWeight: '300',
-  fontSize: '15px',
-  lineHeight: '22px',
-  color:'rgb(0, 0, 0)',
-}));
 
 
     // GSAP animation TESTING
@@ -48,3 +37,5 @@ export const Linked = styled(Paper)(({ theme }) => ({
   //});
   // with this  <div className="box" ref={boxRef}>Hello</div> <!--- 
 
+
+  //Styled Components MUI

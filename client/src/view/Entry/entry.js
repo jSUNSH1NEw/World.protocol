@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Button,CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box, Grid, Typography, createTheme, ThemeProvider,Link  } from '@mui/material/';
 import { useNavigate } from 'react-router-dom';
+import LoadingButton from '@mui/lab/LoadingButton';
 
 
 import './entry.css';
@@ -9,7 +10,7 @@ import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
 
 function Copyright(props) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography variant="body2" align="center" {...props} >
       {'Copyright © '}
       <Typography color="inherit">
         World.protocol
@@ -27,6 +28,12 @@ const Confirm = (e) => {
 }
 
 export default function SignInSide() {
+
+  const [loading, setLoading] = React.useState(false);
+  function handleClick() {
+    setLoading(true);
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -52,6 +59,7 @@ export default function SignInSide() {
             <Typography  component="h1" variant="h5"
               sx={{
               color: 'white',
+              fontFamily: 'Montserrat Bold',
               }}>
               System used for stop metamask hijack / scam  
             </Typography>
@@ -59,6 +67,7 @@ export default function SignInSide() {
             <Typography  component="h3"
               sx={{
               color: 'white',
+              fontFamily: 'Montserrat Bold',
               }}>
               We need you to drop a external nonn metamask wallet for the wallet receveir input
             </Typography>
@@ -80,15 +89,18 @@ export default function SignInSide() {
               flexDirection: 'column',
               alignItems: 'center',
               color: 'black',
+              fontFamily: 'Montserrat Regular'
             }}
           >
             <Typography  component="h1" variant="h5">
               Create your
             </Typography>
+
             <Typography component="h1" variant="h5">
              NFT authentification ticket
             </Typography>
-            <Box  id="box" sx={{ m: 1, bgcolor: 'white' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+
+            <Box  id="box" sx={{ m: 1, bgcolor: 'white',fontFamily: 'Montserrat Regular' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <div className='marge'></div>
               <TextField
                 margin="normal"
@@ -110,26 +122,28 @@ export default function SignInSide() {
               />
               <div className='margecontrol'></div>
               <FormControlLabel
-              
                 control={<Checkbox value="remember" color="primary" />}
                 label="Accept the DAO system"
               />
+              <div className='margecontrol2'></div>
                 <Link variant="body2">
                     Read lite paper 
                 </Link>
 
-                
-              <Button
+              <LoadingButton
+                onClick={handleClick}
+                loading={loading}
+                loadingIndicator="Loading..."
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2, bgcolor: 'black' }}
-                onClick={(e) => Confirm(e)}
+                sx={{ mt: 3, mb: 2, bgcolor: 'black',fontFamily: 'Montserrat Bold',textTransform: 'capitalize', }}
+                //onClick={(e) => Confirm(e)}
               >
-                <Link href="/buyContract">
-                   <p>CREATE YOUR TICKET</p>
-                </Link>
-              </Button>
+              <Link href="/buyContract">
+                Create your ticket
+              </Link>
+              </LoadingButton>
               <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
