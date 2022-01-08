@@ -155,7 +155,15 @@
 }
 @media screen and (max-width: 465px) {
   .cards {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 50%;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
   }
  
 }

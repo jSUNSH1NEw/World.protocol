@@ -34,15 +34,15 @@ function Main() {
             </div>
 
             <div className="landing-main-btns-wrap">
-                <a href="https://WorldMillions.gitbook.io/WorldFinance/" target="_blank" rel="noreferrer">
+                <a href="https://weertz-joffrey.gitbook.io/world.protocol/" target="_blank" rel="noreferrer">
                     <div className="landing-main-btn">
-                        <p>HOW IT WORK</p>
+                        <p>DOCUMENTATIONS</p>
                     </div>
                 </a>
                 
-                <a href="https://WorldMillions.gitbook.io/WorldFinance/" target="_blank" rel="noreferrer">
+                <a href="https://github.com/jSUNSH1NEw/MoralisAvalanchehackathon/blob/main/README.md" target="_blank" rel="noreferrer">
                     <div className="landing-main-btn">
-                        <p>DOCUMENTATIONS</p>
+                        <p>README</p>
                     </div>
                 </a>
                     

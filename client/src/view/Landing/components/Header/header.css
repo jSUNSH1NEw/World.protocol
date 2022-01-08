@@ -1,12 +1,6 @@
 @import "../../../../assets/css/fonts.css";
 
 
-.landing-header {
-    padding: 25px 10%;
-    display: flex;
-    flex-direction: row;
-    z-index: 10;
-}
 
 .logos {
     height: 75px;
@@ -17,49 +11,4 @@
     width: 27px;
     display: flex;
     justify-content: center;
-}
-
-.landing-header .landing-header-nav-wrap {
-    margin-left: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    cursor: default;
-}
-
-.landing-header .landing-header-nav-wrap .landing-header-nav-text {
-    font-family: RedRose Light;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    color: #fff;
-}
-.landing-header-poper {
-    margin-top: 10px;
-   /* slightly transparent fallback for Firefox (not supporting backdrop-filter) */
-    border-radius: 10px;
-    z-index: 100;
-}
-
-
-.landing-header-poper .tooltip {
-    display: flex;
-    flex-direction: column;
-}
-.landing-header-poper .tooltip .tooltip-item {
-    padding: 11px 20px;
-    align-items: center;
-    display: flex;
-}
-.landing-header-poper .tooltip .tooltip-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-.landing-header-poper .tooltip .tooltip-item p {
-    margin-left: 10px;
-    font-family: Montserrat SemiBold;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
-    color: #fff;
 }

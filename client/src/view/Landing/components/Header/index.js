@@ -4,7 +4,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import './header.css';
 import WRLDIcon from "../../../../assets/icon/coin.png";
-
+import "../../../../assets/css/fonts.css";
 
 const pages = ['Our Team','Roadmap'];
 
@@ -120,7 +120,7 @@ const ResponsiveAppBar = () => {
   return (
     <AppBar position="static" sx={{ backgroundColor:'rgba(255,255,255,0.0) ', boxShadow:'0', zIndex:'1', flexGrow: 1}}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar  sx={{ mr: 10 }}>
 
         <img className='logos' src={WRLDIcon} alt="Logo of world protocol" />   
           <Typography
@@ -130,7 +130,7 @@ const ResponsiveAppBar = () => {
             sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}
           >  
           </Typography>
-          <Box sx={{ flexGrow: 1, ml:25, mt:1, display: { xs: 'flex', md: 'none' } }}>
+          <Box sx={{ flexGrow: 1, mt:1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="Burger Menu"
@@ -241,8 +241,13 @@ const ResponsiveAppBar = () => {
             >
               
                 <MenuItem onClick={handleCloseNavMenu}>
-                  <Link href="https://weertz-joffrey.gitbook.io/world.protocol/">
+                  <Link href="https://github.com/jSUNSH1NEw/MoralisAvalanchehackathon" target="_blank">
                     <Typography textAlign="center">GitHub</Typography>
+                  </Link>
+                </MenuItem>
+                <MenuItem onClick={handleCloseNavMenu}>
+                  <Link href="https://twitter.com/World_Protocol" target="_blank">
+                    <Typography textAlign="center">Tweeter</Typography>
                   </Link>
                 </MenuItem>
             </Menu>

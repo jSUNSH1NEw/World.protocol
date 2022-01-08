@@ -50,30 +50,28 @@ function Footer() {
     //const trimmedStakingAPY = trim(stakingAPY * 100, 1);
 
     return (
-        <div className="landing-footer">
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={0}>
-                <Grid className="landing-footer-item-wrap" item xs={12} sm={4} md={4} lg={4}>
-                   <Item className="landing-footer-item-title">Total stacked</Item>
-                   <TrimItem classNAme="landing-footer-item-value"> 
+                <Grid item xs={12} sm={4} md={4} lg={4}>
+                   <Item>Total stacked</Item>
+                   <TrimItem> 
                       {/*Trim stacked*/ }Trim Stacked
                    </TrimItem>
                 </Grid>
-                <Grid className="landing-footer-item-wrap" item xs={12} sm={4} md={4} lg={4}>
-                   <Item className="landing-footer-item-title">Total Treasury</Item>
-                   <TrimItem classNAme="landing-footer-item-value"> 
+                <Grid item xs={12} sm={4} md={4} lg={4}>
+                   <Item >Total Treasury</Item>
+                   <TrimItem> 
                       {/*Trim treasury*/ }Trim Treasury
                    </TrimItem>
                 </Grid>
-                <Grid className="landing-footer-item-wrap" item xs={12} sm={4} md={4} lg={4}>
-                   <Item className="landing-footer-item-title">Current APY</Item>
-                   <TrimItem classNAme="landing-footer-item-value"> 
+                <Grid item xs={12} sm={4} md={4} lg={4}>
+                   <Item>Current APY</Item>
+                   <TrimItem> 
                       {/*Trim APY*/ }Trim APY
                    </TrimItem>
                 </Grid>
             </Grid>
         </Box>
-        </div>
     );
 }
 
