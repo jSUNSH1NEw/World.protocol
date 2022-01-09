@@ -7,7 +7,5 @@ export const StyledDiv = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-    margin-left: 70px;
-    margin-bottom: 40px;
+    margin-top: 10px;
 `;

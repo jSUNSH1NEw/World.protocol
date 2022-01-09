@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from 'react-router-dom';
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Zoom, Grid } from "@mui/material";
 // COMPONENTS IMPORT
 import { StyledDiv } from './dash.styles';
 
@@ -9,43 +9,86 @@ const drawerWidth = 240;
 
 
 
+//const isAppLoading = useSelector<IReduxState, boolean>(state => state.app.loading);
+    //const app = useSelector<IReduxState, IAppSlice>(state => state.app);
+
+    //const trimmedStakingAPY = trim(app.stakingAPY * 100, 1);
 
 
 function XDashboard() {
     return (
         <StyledDiv>
-            <Box
-                className="dashboard-container"
-                component="main1" // Main content need to be changed based on the component you want to render
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
-            >
-                <Typography paragraph>
-                    trimed coin  
-                </Typography>
-            </Box>
+            <Box className="dashboard-infos-wrap" 
+            sx={{flexGrow: 0 , width: { sm: `calc(100% - ${drawerWidth}px)` }}}>
+                <Zoom in={true}>
+                    <Grid container spacing={5} >
+                        <Grid item lg={5} mr={2} mt={5} md={6} sm={6} xs={12} sx={{backgroundColor: 'black', borderRadius: '7px', color: 'white', width: '50px', marginBottom: '20px'}} >
+                            <Box>
+                                <p className="card-title">WRLD PRICE</p>
+                                <p className="card-value"></p>
+                            </Box>
+                        </Grid>
 
-            <Box
-                className="dashboard-container2"
-                component="main2" 
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
-            >
-                <Typography paragraph>
-                    trimed treasury  
-                </Typography>
-            </Box>
+                        <Grid item lg={5} md={6} mt={5} sm={6} xs={12} sx={{backgroundColor: 'black', borderRadius: '7px', color: 'white', marginBottom: '20px'}}>
+                            <div className="dashboard-card">
+                                <p className="card-title">Market Cap</p>
+                                <p className="card-value">
+                                    
+                                </p>
+                            </div>
+                        </Grid>
 
-            <Box
-                className="dashboard-container3"
-                component="main3" 
-                sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` }}}
-            >   
-                <Box
-                sx={{width: '200px', height :'100px' , backgroundColor: 'whiteSmoke'}}
-                >
-                    <Typography paragraph >
-                        trimed apy
-                    </Typography>
-                </Box>
+
+
+                        <Grid item lg={5} mr={2} md={6} sm={6} xs={12}  sx={{backgroundColor: 'black', borderRadius: '7px', color: 'white', marginBottom: '20px'}}>
+                            <div className="dashboard-card">
+                                <p className="card-title">TVL</p>
+                                <p className="card-value">
+                                    
+                                </p>
+                            </div>
+                        </Grid>
+
+                        <Grid item lg={5} mr={2} md={6} sm={6} xs={12}  sx={{backgroundColor: 'black', borderRadius: '7px', color: 'white', marginBottom: '20px'}}>
+                            <div className="dashboard-card">
+                                <p className="card-title">APY</p>
+                                <p className="card-value"></p>
+                            </div>
+                        </Grid>
+
+                        <Grid item lg={5} mr={2} md={6} sm={6} xs={12}  sx={{backgroundColor: 'black', borderRadius: '7px', color: 'white', marginBottom: '20px'}}>
+                            <div className="dashboard-card">
+                                <p className="card-title">Current Index</p>
+                                <p className="card-value"></p>
+                            </div>
+                        </Grid>
+
+                        <Grid item lg={5}  md={6} sm={6} xs={12}  sx={{backgroundColor: 'black', borderRadius: '7px', color: 'white', marginBottom: '20px'}}>
+                            <div className="dashboard-card">
+                                <p className="card-title">Treasury Balance</p>
+                                <p className="card-value">
+
+                                </p>
+                            </div>
+                        </Grid>
+
+                        <Grid item lg={5} mr={2} md={6} sm={6} xs={12}  sx={{backgroundColor: 'black', borderRadius: '7px', color: 'white', marginBottom: '20px'}}>
+                            <div className="dashboard-card">
+                                <p className="card-title">Backing per $WRLD</p>
+                                <p className="card-value">
+                                   
+                                </p>
+                            </div>
+                        </Grid>
+
+                        <Grid item lg={5} md={2} sm={2} xs={12} sx={{backgroundColor: 'black', borderRadius: '7px', color: 'white'}}>
+                            <div className="dashboard-card">
+                                <p className="card-title">Runway</p>
+                                <p className="card-value"></p>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </Zoom>
             </Box>
 
 
