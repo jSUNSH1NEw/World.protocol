@@ -8,6 +8,12 @@ const FontStyles = createGlobalStyle`
   font-family: 'Roboto Condensed';
   src: url(${MontserratR}) format('truetype');
 }
+@font-face {
+  font-family: 'Roboto Condensed';
+  src: url(${MontserratB}) format('truetype');
+}
+
 `;
+
 
 export default FontStyles;

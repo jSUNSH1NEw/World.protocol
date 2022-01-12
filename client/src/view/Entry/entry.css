@@ -1,10 +1,10 @@
 
 .logo {
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
-    margin-top: 60px;
-    margin-bottom: 100px;
+    display: flex;
+    width: 55%;
+    height: 55%;
+    margin: auto; 
+    margin-top: 200px;
 
 }
 
@@ -41,3 +41,13 @@
     margin-top: 11px;
 
 }
+
+
+@media screen and (max-width: 465px) {
+    .logo {
+        width: 50%;
+        height: 50%;
+        margin: auto; 
+    }
+
+   }

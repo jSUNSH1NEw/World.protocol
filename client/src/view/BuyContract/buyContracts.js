@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Button,Grid,CssBaseline,Link,Paper,Box,Typography,createTheme, ThemeProvider} from '@mui/material/';
 import LoadingButton from '@mui/lab/LoadingButton';
 import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
-
+import { useChain, useMoralis, useMoralisFile, useMoralisWeb3Api, useMoralisWeb3ApiCall } from 'react-moralis';
 
 function Copyright(props) {
   return (
@@ -33,7 +33,8 @@ export default function SignInSide() {
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
   };
-  
+  const { chainId } = useChain();
+  const { isAuthenticated } = useMoralis();
 
   return (
     <ThemeProvider theme={theme}>
@@ -47,7 +48,7 @@ export default function SignInSide() {
           sx={{
             backgroundColor: 'black',
           }}xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-            <Grid container> 
+            <Grid container sx={{justifyContent:'center', marginTop:'10px'}}> 
             <img className='logo' src={WRLDLogo} alt="Logo of world" />   
             </Grid>
           </Grid>
@@ -68,12 +69,22 @@ export default function SignInSide() {
               fontFamily: 'Montserrat Regular'
             }}
           >
-            <Typography  component="h1" variant="h5">
-              NFT AUTH CONTRACT
+            <Typography  component="h1" variant='h5'>
+              Second !
             </Typography>
-            <Typography component="h1" variant="h5">
-             BY WRLD FOR 
+            <Typography component="h1" variant='h5'>
+             Mint your entry-ticket
             </Typography>
+
+            <Box sx={{ marginTop: '25px', marginBottom: '25px'}}>
+            <Typography  component="h4" >
+              Entry ticket provided by world for, 
+            </Typography>
+            <Typography component="h4">
+             (USERNAME),(WALLETRECEIVER)
+
+            </Typography>
+            </Box>
             <Box  id="box" sx={{ m: 1, bgcolor: 'white' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
             
               <Button

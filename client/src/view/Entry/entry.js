@@ -1,11 +1,13 @@
 import * as React from 'react';
-import { Button,CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box, Grid, Typography, createTheme, ThemeProvider,Link  } from '@mui/material/';
-import { useNavigate } from 'react-router-dom';
+import { CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box, Grid, Typography, createTheme, ThemeProvider,Link } from '@mui/material/';
 import LoadingButton from '@mui/lab/LoadingButton';
-
+import { useMoralis, useMoralisWeb3Api } from 'react-moralis';
+import { PositionedSnackbar, PositionedSnackbar2 } from './entry.styles.js'
+import { CreateUser } from './model/user.model.js';
 
 import './entry.css';
 import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
+//{isAuthenticated&&chainId==='0xa869'?<Redirect to={'/buy'}/>:null}
 
 
 function Copyright(props) {
@@ -21,20 +23,18 @@ function Copyright(props) {
   );
 }
 
+
+
 const theme = createTheme();
-const Confirm = (e) => {
-  const navigate = useNavigate();
-  navigate('/buyContract');
-}
-
 export default function SignInSide() {
-
   const [loading, setLoading] = React.useState(false);
+  
   function handleClick() {
     setLoading(true);
   }
 
   const handleSubmit = (event) => {
+
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
@@ -42,8 +42,30 @@ export default function SignInSide() {
       username: data.get('username'),
       walletReceveir: data.get('walletReceveir'),
     });
+
+    const SaveDaoUsers = (id, username, walletReceiver) => {
+      return CreateUser.CreateDaoUsers.save({
+        username: username,
+        walletReceveir: walletReceiver,
+        date: new Date(),
+      })
+    }
+    // const { error, isUploading, moralisFile ,saveFile } = useMoralisFile();
+    // saveFile(
+      // "username",
+      // "walletReceveir",
+      // files,
+      // {
+        // saveIPFS: true,
+        // saveMoralis: true,
+      // }
+    // );
   };
 
+  const { isAuthenticated, chainId } = useMoralis();
+  const { native } = useMoralisWeb3Api();
+
+  
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
@@ -56,21 +78,8 @@ export default function SignInSide() {
           sx={{
             backgroundColor: 'black',
           }}xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-            <Typography  component="h1" variant="h5"
-              sx={{
-              color: 'white',
-              fontFamily: 'Montserrat Bold',
-              }}>
-              System used for stop metamask hijack / scam  
-            </Typography>
-
-            <Typography  component="h3"
-              sx={{
-              color: 'white',
-              fontFamily: 'Montserrat Bold',
-              }}>
-              We need you to drop a external nonn metamask wallet for the wallet receveir input
-            </Typography>
+            <PositionedSnackbar />
+            <PositionedSnackbar2 />
             <Grid container> 
             <img className='logo' src={WRLDLogo} alt="Logo of world protocol" />   
             </Grid>
@@ -88,16 +97,13 @@ export default function SignInSide() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
-              color: 'black',
-              fontFamily: 'Montserrat Regular'
             }}
           >
             <Typography  component="h1" variant="h5">
-              Create your
+            First !
             </Typography>
-
-            <Typography component="h1" variant="h5">
-             NFT authentification ticket
+            <Typography  component="h1" variant="h5">
+            Create a entry-ticket,
             </Typography>
 
             <Box  id="box" sx={{ m: 1, bgcolor: 'white',fontFamily: 'Montserrat Regular' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
