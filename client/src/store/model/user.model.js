@@ -28,6 +28,5 @@ export const CreateUser = () => {
       },
     },
   };
-  createMoralisObject(DaoUsersSchema);
 };
 

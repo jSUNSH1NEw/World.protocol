@@ -59,11 +59,17 @@ function Footer() {
                    </TrimItem>
                 </Grid>
                 <Grid item xs={12} sm={4} md={4} lg={4}>
-                   <Item >Total Treasury</Item>
+                   <Item >Treasury</Item>
                    <TrimItem> 
                       {/*Trim treasury*/ }Trim Treasury
                    </TrimItem>
+                   <Item >Locked Treasury</Item>
+                   <TrimItem> 
+                      {/*Trim treasury*/ }Trim Locked TWRLD
+                   </TrimItem>
                 </Grid>
+  
+
                 <Grid item xs={12} sm={4} md={4} lg={4}>
                    <Item>Current APY</Item>
                    <TrimItem> 

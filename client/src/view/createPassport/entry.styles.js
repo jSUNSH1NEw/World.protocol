@@ -7,7 +7,7 @@ export const PositionedSnackbar = (props) => {
       open: true,
       vertical: 'top',
       horizontal: 'left',
-      messages: 'System used for stop metamask hijack / scam / phishing',
+      messages: 'Please refer a non-metamask wallet for the Wallet-receiver input',
     });
   
     return (

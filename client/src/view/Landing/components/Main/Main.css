@@ -46,6 +46,7 @@
 .landing-main .landing-main-btns-wrap {
     display: flex;
     flex-direction: row;
+    margin-bottom: 50px;
 
 }
 .landing-main .landing-main-btns-wrap a {
@@ -102,6 +103,26 @@
     font-weight: 500;
     font-size: 23px;
     color: #fff;
+}
+
+.titleText {
+    font-family: RedRose Light;
+    font-style: bold;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 22px;
+    color: rgb(255, 255, 255);
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
+.someText {
+    font-family: Montserrat Light;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 30px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 180px;
 }
 .roadmap-title {
     flex-direction: column;

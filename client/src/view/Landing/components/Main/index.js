@@ -47,21 +47,55 @@ function Main() {
                 </a>
                     
                     <div className="landing-main-btn">
-                    <Link to="/entryContract"> <p>ENTRY TICKET</p> </Link>
+                    <Link to="/createPassport"> <p>ENTRY TICKET</p> </Link>
                     </div>
                     
                 
             </div>
 
-            <div className="Team-title">
+            <div className="titleText">
                 <p>Our team</p>
             </div>
             <div className="landing-main-card-wrap">
                 <Card />
             </div>
 
-            <div className="roadmap-title">
-                <p>Roadmap</p>
+            <h2 className="titleText">
+                Why World.protocol exist
+            </h2>
+
+            <div className="landing-main-btns-wrap">
+                <div className="landing-main-help-text-wrap">
+                    <h4 className="titleText">
+                    For financial freedom  
+                    </h4>
+                    <p className="someText">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec euismod, nisl eget consectetur consectetur, nisi
+                    </p>
+                </div>
+                <div className="landing-main-help-text-wrap">
+                    <h4 className="titleText">
+                        For security purpose
+                    </h4>
+                    <p className="someText">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec euismod, nisl eget consectetur consectetur, nisi
+                    </p>
+                </div>
+                <div className="landing-main-help-text-wrap">
+                    <h4 className="titleText">
+                        For get community ruled 
+                    </h4>
+                    <p className="someText">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Donec euismod, nisl eget consectetur consectetur, nisi
+                    </p>
+                </div>
+            </div>
+
+            <div className="titleText">
+                <p>Our roadmap</p>
             </div>
             <div className="landing-main-roadmap-wrap">
                 <TimeLine />

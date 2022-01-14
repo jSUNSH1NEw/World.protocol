@@ -5,8 +5,9 @@ import {
 } from "react-router-dom";
 
 import Landing from "./view/Landing/landing";
-import Entryticket from "./view/Entry/entry";
-import BuyContract from "./view/BuyContract/buyContracts";
+import CreatePassport from "./view/createPassport/passport";
+import BuyPassport from "./view/buyPassport/buyPassport";
+//import HavePassport from "./view/havePassport/havePassport";
 import Dapps from "./view/dappDashboard/dashboard";
 
 import './assets/css/index.css';
@@ -17,8 +18,8 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Landing />} />
-          <Route path="/entryContract" element={<Entryticket />} />
-          <Route path="/buyContract" element={<BuyContract />} />
+          <Route path="/createPassport" element={<CreatePassport />} />
+          <Route path="/getPassport" element={<BuyPassport />} />
           <Route path="/app/*" element={<Dapps />} />
         </Routes>
       </Router>

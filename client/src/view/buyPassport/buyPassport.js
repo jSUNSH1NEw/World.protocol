@@ -85,24 +85,26 @@ export default function SignInSide() {
 
             </Typography>
             </Box>
-            <Box  id="box" sx={{ m: 1, bgcolor: 'white' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-            
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ mt: 3, mb: 2, bgcolor: 'black', }}
-              >
-                <LoadingButton
+            <Box id="box" component="form"sx={{
+                width: '100px',
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',
+                }}> 
+            <LoadingButton
                 onClick={handleClick}
                 loading={loading}
                 loadingIndicator="Loading..."
-                >
-                <Link href="/app">
-                  Buy and print your contract
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2, ml:5, bgcolor: 'black',fontFamily: 'Montserrat Bold',textTransform: 'capitalize', }}
+                //onClick={(e) => Confirm(e)}
+              >
+                <Link href="/app" sx={{ color: 'white', }}>
+                  {loading ? 'Minting...' : 'Mint passport'}
                 </Link>
-                </LoadingButton>
-              </Button>
+              </LoadingButton>
               <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>

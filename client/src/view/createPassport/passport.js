@@ -1,9 +1,9 @@
 import * as React from 'react';
-import { CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box, Grid, Typography, createTheme, ThemeProvider,Link } from '@mui/material/';
+import { CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box,Button, Grid, Typography, createTheme, ThemeProvider,Link } from '@mui/material/';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { useMoralis, useMoralisWeb3Api } from 'react-moralis';
 import { PositionedSnackbar, PositionedSnackbar2 } from './entry.styles.js'
-import { CreateUser } from './model/user.model.js';
+import { CreateUser } from '../../store/model/user.model.js';
 
 import './entry.css';
 import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
@@ -43,7 +43,7 @@ export default function SignInSide() {
       walletReceveir: data.get('walletReceveir'),
     });
 
-    const SaveDaoUsers = (id, username, walletReceiver) => {
+    const SaveDaoUsers = ( username, walletReceiver) => {
       return CreateUser.CreateDaoUsers.save({
         username: username,
         walletReceveir: walletReceiver,
@@ -79,7 +79,6 @@ export default function SignInSide() {
             backgroundColor: 'black',
           }}xs={12} sm={8} md={5} component={Paper} elevation={6} square>
             <PositionedSnackbar />
-            <PositionedSnackbar2 />
             <Grid container> 
             <img className='logo' src={WRLDLogo} alt="Logo of world protocol" />   
             </Grid>
@@ -99,14 +98,14 @@ export default function SignInSide() {
               alignItems: 'center',
             }}
           >
-            <Typography  component="h1" variant="h5">
-            First !
+            <Typography variant="h5" align="center" color="textPrimary" gutterBottom>
+              {'First step'}
             </Typography>
-            <Typography  component="h1" variant="h5">
-            Create a entry-ticket,
+            <Typography  component="h1" variant="h4" >
+            {'Create your passport'}
             </Typography>
 
-            <Box  id="box" sx={{ m: 1, bgcolor: 'white',fontFamily: 'Montserrat Regular' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box id="box" sx={{ m: 1, bgcolor: 'white',fontFamily: 'Montserrat Regular' }} component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
               <div className='marge'></div>
               <TextField
                 margin="normal"
@@ -135,7 +134,25 @@ export default function SignInSide() {
                 <Link variant="body2">
                     Read lite paper 
                 </Link>
-
+            <Box sx={{
+                width: '50%',
+                display: 'flex',
+                flexDirection: 'row',
+                alignItems: 'center',}}>
+                <LoadingButton
+                onClick={handleClick}
+                loading={loading}
+                loadingIndicator="Loading..."
+                type="submit"
+                fullWidth
+                variant="contained"
+                sx={{ mt: 3, mb: 2, ml:5, bgcolor: 'black',fontFamily: 'Montserrat Bold',textTransform: 'capitalize', }}
+                //onClick={(e) => Confirm(e)}
+              >
+                <Link href="/getPassport" sx={{ color: 'white', }}>
+                  {loading ? 'Loading...' : 'Get passport'}
+                </Link>
+              </LoadingButton>
               <LoadingButton
                 onClick={handleClick}
                 loading={loading}
@@ -143,13 +160,14 @@ export default function SignInSide() {
                 type="submit"
                 fullWidth
                 variant="contained"
-                sx={{ mt: 3, mb: 2, bgcolor: 'black',fontFamily: 'Montserrat Bold',textTransform: 'capitalize', }}
+                sx={{ mt: 3, mb: 2, ml:5, bgcolor: 'black',fontFamily: 'Montserrat Bold',textTransform: 'capitalize', }}
                 //onClick={(e) => Confirm(e)}
               >
-              <Link href="/buyContract">
-                Create your ticket
-              </Link>
+                <Link href="/havePassport" sx={{ color: 'white', }}>
+                  {loading ? 'Loading...' : 'Have passport'}
+                </Link>
               </LoadingButton>
+            </Box>
               <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
