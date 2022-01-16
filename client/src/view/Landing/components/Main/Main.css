@@ -114,16 +114,9 @@
     color: rgb(255, 255, 255);
     margin-top: 150px;
     margin-bottom: 30px;
+    text-decoration: underline dotted;
 }
-.someText {
-    font-family: Montserrat Light;
-    font-style: normal;
-    font-weight: 300;
-    font-size: 11px;
-    line-height: 30px;
-    color: rgb(255, 255, 255);
-    margin-bottom: 180px;
-}
+
 .roadmap-title {
     flex-direction: column;
     align-items: center;

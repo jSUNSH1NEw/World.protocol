@@ -179,7 +179,7 @@ const ResponsiveAppBar = () => {
                     <StyledInputBasePhone
                     data="Our prices"
                     inputProps={{ 'aria-label': 'search' }}> 
-                      0.160 $
+                      0.00 $
                     </StyledInputBasePhone>
                   </SearchPhone>
                 </MenuItem>
@@ -194,7 +194,7 @@ const ResponsiveAppBar = () => {
             <StyledInputBase
               data="Our prices"
               inputProps={{ 'aria-label': 'search' }}> 
-                0.160 $
+                0.00 $
             </StyledInputBase>
           </Search>
           <Box sx={{ flexGrow: 0, display: { xs: "none", md: "flex" } }}>

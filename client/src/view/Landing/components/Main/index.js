@@ -6,8 +6,45 @@ import WRLDIcon  from "../../../../assets/icon/LogoDesigne.png";
 import Card from "./components/Card/Card.jsx";
 import TimeLine from "./components/timeLine.jsx";
 
+import { styled } from '@mui/material/styles';
+import { Box, Paper, Grid } from "@mui/material";
+
+import ReceiptIcon from '@mui/icons-material/Receipt';
+import PublicIcon from '@mui/icons-material/Public';
+import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+
 // CSS import 
 import "./Main.css";
+
+
+const Text = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body2,
+    textAlign: 'center',
+    color: "white",
+    backgroundColor: "rgba(0,0,0,0.0)",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: "18px",
+    lineHeight: "22px",
+    marginTop: "100px",
+    marginBottom: "4px",
+  
+  }));
+const TextTittle = styled(Paper)(({ theme }) => ({
+    ...theme.typography.title,
+    textAlign: 'center',
+    backgroundColor: "rgba(0,0,0,0.0)",
+    color: "white",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "bold",
+    fontSize: "25px",
+    lineHeight: "22px",
+    marginTop: "100px",
+    marginBottom: "4px",
+  
+  }));
 
   
 function Main() {
@@ -61,48 +98,45 @@ function Main() {
             </div>
 
             <h2 className="titleText">
-                Why World.protocol exist
+                How it works
             </h2>
+            <Box sx={{ flexGrow: 1, mb:40}}>
+            <Grid container rowSpacing={1} columnSpacing={{ xs: 6, sm: 6, md: 4, lg:4 }} columns={12}>
+               <Grid item xs={12} sm={12} md={4} lg={4} direction="column" justifyContent="center" alignItems="center">
+                   <TextTittle>Buy a TWRLD Passport</TextTittle>
+                   <Text> 
+                        By buying a TWRLD Passport you will become a citizen of world.protocole
+                        who get some part of the "TWRLD locked treasury", which is a DAO locked treasury 
+                        that is used to buy/sell WRLD.
+                   </Text>
+               </Grid>
 
-            <div className="landing-main-btns-wrap">
-                <div className="landing-main-help-text-wrap">
-                    <h4 className="titleText">
-                    For financial freedom  
-                    </h4>
-                    <p className="someText">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec euismod, nisl eget consectetur consectetur, nisi
-                    </p>
-                </div>
-                <div className="landing-main-help-text-wrap">
-                    <h4 className="titleText">
-                        For security purpose
-                    </h4>
-                    <p className="someText">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec euismod, nisl eget consectetur consectetur, nisi
-                    </p>
-                </div>
-                <div className="landing-main-help-text-wrap">
-                    <h4 className="titleText">
-                        For get community ruled 
-                    </h4>
-                    <p className="someText">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Donec euismod, nisl eget consectetur consectetur, nisi
-                    </p>
-                </div>
-            </div>
+               <Grid item xs={12} sm={12} md={4} lg={4}>
+                   <TextTittle >Enter in the WRLD dapps</TextTittle>
+                   <Text> 
+                        You can enter in the WRLD dapps by using your passport.
+                        the will give you access to the dapps. Where you can make legendary
+                        staking/minting interest.
+                   </Text>
+               </Grid>
+               
+               <Grid item xs={12} sm={12} md={4} lg={4}>
+                   <TextTittle >Make benefits</TextTittle>
+                    
+                   <Text> 
+                    We expect to become the first entity locked bond,
+                    with a Decentralized Autonomous Organization parameter 
+                   </Text>
+                </Grid>
+            </Grid>
+        </Box>
 
             <div className="titleText">
                 <p>Our roadmap</p>
             </div>
             <div className="landing-main-roadmap-wrap">
                 <TimeLine />
-            </div>
-
-
-                
+            </div>   
         </div>
     );
 }

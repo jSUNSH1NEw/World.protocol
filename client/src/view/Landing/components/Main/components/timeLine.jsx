@@ -17,10 +17,10 @@ export default function CustomizedTimeline() {
         <TimelineOppositeContent
           sx={{ m: 'auto 0', fontWeight: 'bold' }}
           align="right"
-          variant="body2"
+          variant="title"
           color="white"
         >
-          December 2021
+           Phase 1 | Moralis/Avax hackathon
         </TimelineOppositeContent>
 
         <TimelineSeparator>
@@ -33,7 +33,7 @@ export default function CustomizedTimeline() {
 
         <TimelineContent sx={{ py: '70px',color:'white' }}>
             <Typography variant="h6" component="span" sx={{ fontWeight: 'bold'}}>
-            Phase 1 : Moralis/Avax entry
+            November 2021
             </Typography>
             <Typography sx={{ marginTop: '7px'}}>
              start the development and the design of World.protocol
@@ -44,10 +44,10 @@ export default function CustomizedTimeline() {
       <TimelineItem >
         <TimelineOppositeContent
           sx={{ m: 'auto 0' }}
-          variant="body2"
+          variant="title"
           color="white"
         >
-          January 2021
+          Phase 2 | Development 
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -58,9 +58,9 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: '75px', color:'white' }}>
           <Typography variant="h6" component="span" sx={{ fontWeight: 'bold' }}>
-          Phase: 2 Development 
+            December 2021 
           </Typography>
-          <Typography sx={{ marginTop: '7px'}}>Creation of the landing , authtoken(entry ticket) En Dashboard </Typography>
+          <Typography sx={{ marginTop: '7px'}}>Creation of the TWRLD locked treasury with NFT passport authentification system</Typography>
         </TimelineContent>
       </TimelineItem>
 
@@ -68,10 +68,10 @@ export default function CustomizedTimeline() {
       <TimelineItem>
       <TimelineOppositeContent
           sx={{ m: 'auto 0' }}
-          variant="body2"
+          variant="title"
           color="white"
         >
-          February 2021
+          Phase 3 | Research VC funds  
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector />
@@ -82,9 +82,9 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: '75px', marginLeft: '-2px', color: 'white' }}>
           <Typography variant="h6" component="span" sx={{ color:'#487C89', fontWeight: 'bold' }}>
-          Phase 3 : Deploiement 
+          January 2022
           </Typography>
-          <Typography sx={{ marginTop: '7px'}} >Delpoiement of the application into avalanche Mainnet </Typography>
+          <Typography sx={{ marginTop: '7px'}} >Acquire funds for auditing Wrlderc20, wAVEerc20 and locked bond depot architecture  before deployment into Avalnche main-net</Typography>
         </TimelineContent>
       </TimelineItem>
 
@@ -92,10 +92,10 @@ export default function CustomizedTimeline() {
       <TimelineItem>
       <TimelineOppositeContent
           sx={{ m: 'auto 0' }}
-          variant="body2"
+          variant="title"
           color="white"
         >
-          March 2021
+          Phase 4 | Deployment
         </TimelineOppositeContent>
         <TimelineSeparator>
           <TimelineConnector sx={{ bgcolor: 'grey.main' }} />
@@ -106,9 +106,9 @@ export default function CustomizedTimeline() {
         </TimelineSeparator>
         <TimelineContent sx={{ py: '75px', marginLeft: '1px', color:'white', width:'250px', border:'red'}}>
           <Typography variant="h6" component="span" sx={{ color:'#487C89', fontWeight: 'bold' }}>
-          Phase 4 : Auditing 
+          March 2022
           </Typography>
-          <Typography sx={{ marginTop: '7px'}}>Acquire funds for auditing Wrlderc20, wAVEerc20 and locked bond depot architecture </Typography>
+          <Typography sx={{ marginTop: '7px'}}>World.Protocol officialy deployed into mainet</Typography>
         </TimelineContent>
       </TimelineItem>
     </Timeline>

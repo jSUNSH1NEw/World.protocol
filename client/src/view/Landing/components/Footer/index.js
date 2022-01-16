@@ -51,29 +51,33 @@ function Footer() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <Grid container spacing={0}>
-                <Grid item xs={12} sm={4} md={4} lg={4}>
-                   <Item>Total stacked</Item>
+            <Grid container spacing={0} columns={16}>
+               <Grid item xs={8} sm={8} md={4} lg={4}>
+                   <Item>Total WRLD stacked</Item>
                    <TrimItem> 
-                      {/*Trim stacked*/ }Trim Stacked
+                      {/*Trim stacked*/ }0.00
                    </TrimItem>
-                </Grid>
-                <Grid item xs={12} sm={4} md={4} lg={4}>
-                   <Item >Treasury</Item>
+               </Grid>
+
+               <Grid item xs={8} sm={8} md={4} lg={4}>
+                   <Item >WRLD Treasury</Item>
                    <TrimItem> 
-                      {/*Trim treasury*/ }Trim Treasury
+                      {/*Trim treasury*/ }0.00
                    </TrimItem>
-                   <Item >Locked Treasury</Item>
+               </Grid>
+               
+               <Grid item xs={8} sm={8} md={4} lg={4}>
+                   <Item >Locked TWRLD Treasury</Item>
                    <TrimItem> 
-                      {/*Trim treasury*/ }Trim Locked TWRLD
+                      {/*Trim treasury*/ }0.00
                    </TrimItem>
                 </Grid>
   
 
-                <Grid item xs={12} sm={4} md={4} lg={4}>
+                <Grid item xs={8} sm={8} md={4} lg={4}>
                    <Item>Current APY</Item>
                    <TrimItem> 
-                      {/*Trim APY*/ }Trim APY
+                      {/*Trim APY*/ }11 113 558 %
                    </TrimItem>
                 </Grid>
             </Grid>

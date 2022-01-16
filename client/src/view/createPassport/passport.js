@@ -3,7 +3,7 @@ import { CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box,Button, Grid
 import LoadingButton from '@mui/lab/LoadingButton';
 import { useMoralis, useMoralisWeb3Api } from 'react-moralis';
 import { PositionedSnackbar, PositionedSnackbar2 } from './entry.styles.js'
-import { CreateUser } from '../../store/model/user.model.js';
+import {CreateObject} from '../../store/model/user.model.js';
 
 import './entry.css';
 import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
@@ -27,29 +27,36 @@ function Copyright(props) {
 
 const theme = createTheme();
 export default function SignInSide() {
+  const [username, setUsername] = React.useState();
+  const [walletReceiver, setWalletReceiver] = React.useState();
   const [loading, setLoading] = React.useState(false);
+  const { isAuthenticated, chainId, signup } = useMoralis();
+  const { native } = useMoralisWeb3Api();
   
-  function handleClick() {
-    setLoading(true);
-  }
 
   const handleSubmit = (event) => {
-
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+    const data = new FormData();
     // eslint-disable-next-line no-console
+    data.append('username', username);
+    data.append('walletReceiver', walletReceiver);
+  
     console.log({
-      username: data.get('username'),
-      walletReceveir: data.get('walletReceveir'),
+      username,
+      walletReceiver,
     });
 
-    const SaveDaoUsers = ( username, walletReceiver) => {
-      return CreateUser.CreateDaoUsers.save({
-        username: username,
-        walletReceveir: walletReceiver,
-        date: new Date(),
-      })
-    }
+    //create user  in CreateSchema
+    //call Logic function for create user in db
+
+    const user = new CreateObject.AddUser.save({
+      username: username,
+      walletReceveir: walletReceiver,
+      date: new Date(),
+    });
+    signup(user);
+    setLoading(true);
+
     // const { error, isUploading, moralisFile ,saveFile } = useMoralisFile();
     // saveFile(
       // "username",
@@ -62,9 +69,18 @@ export default function SignInSide() {
     // );
   };
 
-  const { isAuthenticated, chainId } = useMoralis();
-  const { native } = useMoralisWeb3Api();
-
+  const getPassport = (event) => {
+    event.preventDefault();
+    const data = new FormData();
+    // eslint-disable-next-line no-console
+    data.append('username', username);
+    data.append('walletReceiver', walletReceiver);
+    console.log({
+      username,
+      walletReceiver,
+    });
+    setLoading(true);
+  };
   
   return (
     <ThemeProvider theme={theme}>
@@ -112,8 +128,10 @@ export default function SignInSide() {
                 id="username"
                 label="username"
                 name="username"
-                type="username"
+                type="text"
                 autoComplete="Username"
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
                 autoFocus
               />
               <div className='marge'></div>
@@ -122,8 +140,10 @@ export default function SignInSide() {
                 id="walletreceveir"
                 name="walletReceveir"
                 label="External non-metamask wallet receveir"
-                type="WalletReceveir"
+                type="bytes32"
                 autoComplete="External (non-metamask) Avax Wallet "
+                value={walletReceiver}
+                onChange={(event) => setWalletReceiver(event.target.value)}
               />
               <div className='margecontrol'></div>
               <FormControlLabel
@@ -140,7 +160,7 @@ export default function SignInSide() {
                 flexDirection: 'row',
                 alignItems: 'center',}}>
                 <LoadingButton
-                onClick={handleClick}
+                onClick={(e) => handleSubmit(e)}
                 loading={loading}
                 loadingIndicator="Loading..."
                 type="submit"
@@ -154,7 +174,7 @@ export default function SignInSide() {
                 </Link>
               </LoadingButton>
               <LoadingButton
-                onClick={handleClick}
+                // onClick={}
                 loading={loading}
                 loadingIndicator="Loading..."
                 type="submit"
