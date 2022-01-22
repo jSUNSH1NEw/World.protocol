@@ -8,14 +8,16 @@ import "./style.scss";
 function App() {
     const dispatch = useDispatch();
 
-    const { provider, chainID, connected } = useWeb3Context();
-    const nftTicket = useCallback() 
+    const { provider, chainID, connected, } = useWeb3Context();
+    const nftPassport = useCallback() 
+
 
     const loadApp = useCallback(
         loadProvider => {
             dispatch(loadAppDetails({ networkID: chainID, provider: loadProvider }));
         },
         [connected],
+
     );
 
     useEffect(() => {

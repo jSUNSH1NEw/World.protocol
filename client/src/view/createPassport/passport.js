@@ -30,6 +30,7 @@ export default function SignInSide() {
   const [username, setUsername] = React.useState();
   const [walletReceiver, setWalletReceiver] = React.useState();
   const [loading, setLoading] = React.useState(false);
+  const [getTWRLD, setgetTWRLD] = React.useState();
   const { isAuthenticated, chainId, signup } = useMoralis();
   const { native } = useMoralisWeb3Api();
   
@@ -71,16 +72,25 @@ export default function SignInSide() {
 
   const getPassport = (event) => {
     event.preventDefault();
+    isAuthenticated && chainId === '0xa869' ? setgetTWRLD(true) : setgetTWRLD(false);
     const data = new FormData();
     // eslint-disable-next-line no-console
     data.append('username', username);
     data.append('walletReceiver', walletReceiver);
+    
     console.log({
       username,
       walletReceiver,
     });
     setLoading(true);
   };
+
+  const SignTWRLD = (event) => {
+    event.preventDefault();
+  };
+
+    
+
   
   return (
     <ThemeProvider theme={theme}>
@@ -93,6 +103,7 @@ export default function SignInSide() {
           md={7}
           sx={{
             backgroundColor: 'black',
+            
           }}xs={12} sm={8} md={5} component={Paper} elevation={6} square>
             <PositionedSnackbar />
             <Grid container> 
@@ -104,6 +115,7 @@ export default function SignInSide() {
         <Grid
          item sx={{
             backgroundColor: '#FFFFFF',
+            display: { sx: 'block', md: 'block' },
          }} xs={false} sm={4} md={7} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -155,12 +167,13 @@ export default function SignInSide() {
                     Read lite paper 
                 </Link>
             <Box sx={{
-                width: '50%',
-                display: 'flex',
+                width: '80%',
+                display: { sx: 'flex', md: 'flex', lg: 'flex' },
                 flexDirection: 'row',
-                alignItems: 'center',}}>
-                <LoadingButton
-                onClick={(e) => handleSubmit(e)}
+                alignItems: 'center',}} xs={3}>
+
+              <LoadingButton
+                //onClick={(e) => metamaskConnectTWRLD(e)}
                 loading={loading}
                 loadingIndicator="Loading..."
                 type="submit"
@@ -170,9 +183,26 @@ export default function SignInSide() {
                 //onClick={(e) => Confirm(e)}
               >
                 <Link href="/getPassport" sx={{ color: 'white', }}>
-                  {loading ? 'Loading...' : 'Get passport'}
+                  {loading ? 'Loading...' : 'Get TWRLD'}
                 </Link>
               </LoadingButton>
+                <LoadingButton
+                    onClick={(e) => handleSubmit(e)}
+                    loading={loading}
+                    loadingIndicator="Loading..."
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2, ml:5, bgcolor: 'black',fontFamily: 'Montserrat Bold',textTransform: 'capitalize', }}
+                    //onClick={(e) => Confirm(e)}
+                      >
+                    <Link href="/getPassport" sx={{ color: 'white', }}>
+                      {loading ? 'Loading...' : 'Get passport'}
+                    </Link>
+                </LoadingButton>
+
+
+
               <LoadingButton
                 // onClick={}
                 loading={loading}

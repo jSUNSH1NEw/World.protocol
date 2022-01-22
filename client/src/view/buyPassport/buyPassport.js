@@ -4,20 +4,6 @@ import LoadingButton from '@mui/lab/LoadingButton';
 import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
 import { useChain, useMoralis, useMoralisFile, useMoralisWeb3Api, useMoralisWeb3ApiCall } from 'react-moralis';
 
-function Copyright(props) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" href="">
-        World.protocol
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-      {' For (USERNAME)'}
-      {'.'}
-    </Typography>
-  );
-}
 
 const theme = createTheme();
 
@@ -76,15 +62,6 @@ export default function SignInSide() {
              Mint your entry-ticket
             </Typography>
 
-            <Box sx={{ marginTop: '25px', marginBottom: '25px'}}>
-            <Typography  component="h4" >
-              Entry ticket provided by world for, 
-            </Typography>
-            <Typography component="h4">
-             (USERNAME),(WALLETRECEIVER)
-
-            </Typography>
-            </Box>
             <Box id="box" component="form"sx={{
                 width: '100px',
                 display: 'flex',
@@ -105,7 +82,6 @@ export default function SignInSide() {
                   {loading ? 'Minting...' : 'Mint passport'}
                 </Link>
               </LoadingButton>
-              <Copyright sx={{ mt: 5 }} />
             </Box>
           </Box>
         </Grid>
