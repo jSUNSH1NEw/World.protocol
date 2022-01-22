@@ -59,7 +59,7 @@
 > The World protocol aim to support the cash flow of a massive token encashment by users in order to increase and stabilize the token capitalization
 > 
 > 
-**Read more about the World Protocol on [the project homepage]().**
+**Read more about the World Protocol on [the project homepage](https://modest-murdock-eac5b5.netlify.app/).**
 
 # 📒 Wiki
 
@@ -93,7 +93,7 @@ Here's a brief high-level overview of the tech stack the World protocol uses:
 
 Interested in contributing to the World Protocol ? Thanks so much for your interest! We are always looking for improvements to the project and contributions from open-source developers are greatly appreciated.
 
-If you have a contribution in mind, please check out our [Contribution Guide]()
+If you have a contribution in mind, please check out our [Contribution Guide](https://weertz-joffrey.gitbook.io/world.protocol/)
 
 # 🌟 Spread the word!
 
