@@ -6,18 +6,21 @@ import "@openzeppenlin/contracts/acess/Ownable.sol";
 
 contract TicketAuth is ERC1155, Ownable {
     uint256 public tokenCounter;
-    constructor () public ERC1155 ("Wauth", "WTICKET") {
+    constructor () public ERC1155 ("TWRLDpassport", "TWRLDPassport") {
         tokenCounter = 0;
     }
 
-    function createWTicket(string memory tokenURI) public returns (uint256) {
 
-        uint256 newWAuthId = tokenCounter++;
+ //function to mint a new token
 
-        _safeMint(msg.sender,  newWAuthId);
-        _setTokenURI(newWAuthId, tokenURI);
+    function mintPassport(string memory tokenURI) public returns (uint256) {
 
-        return newWAuthId;
+        uint256 newTWRLDpass = tokenCounter++;
+
+        _safeMint(msg.sender,  newTWRLDpass);
+        _setTokenURI(newTWRLDpass, tokenURI);
+
+        return newTWRLDpass;
 
     }
 
@@ -32,4 +35,5 @@ contract TicketAuth is ERC1155, Ownable {
 
         return _getTokenURI(tokenId);
     }
+
 }

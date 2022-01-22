@@ -7,15 +7,17 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Snapshot.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20FlashMint.sol";
 
+
+// TODO : refacto bonding system too treasury contract (see treasury.sol)
 /// @custom:security-contact samuel.gao023@gmail.com
-contract WorldMillion is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, ERC20FlashMint {
+contract Worldprotocol is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, ERC20FlashMint {
 
     address public immutable OWNER_ADDRESS;
     // Bond Name.
     address public BOND_ONE;
     address public BOND_TWO;
 
-    constructor() ERC20("WorldMillion", "WRLD") {
+    constructor() ERC20("Worldprotocol", "WRLD") {
         _mint(msg.sender, 100000 * 10 ** decimals());
         OWNER_ADDRESS = msg.sender;
     }
@@ -49,7 +51,7 @@ contract WorldMillion is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, ERC20Flas
 
 contract WRLDBondOne is ERC20, ERC20Burnable, Ownable {
 
-    constructor() ERC20("WorldMillionBondOne", "WRLDBondOne") {
+    constructor() ERC20("WorldprotocolBondOne", "WRLDBondOne") {
         _mint(msg.sender, 100000 * 10 ** decimals());
     }
 
