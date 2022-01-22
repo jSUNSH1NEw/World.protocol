@@ -84,7 +84,7 @@ export default function CustomizedTimeline() {
           <Typography variant="h6" component="span" sx={{ color:'#487C89', fontWeight: 'bold' }}>
           January 2022
           </Typography>
-          <Typography sx={{ marginTop: '7px'}} >Acquire funds for auditing Wrlderc20, wAVEerc20 and locked bond depot architecture  before deployment into Avalnche main-net</Typography>
+          <Typography sx={{ marginTop: '7px'}} >Acquire funds for auditing Wrlderc20, wAVEerc20 and locked bond depot architecture  before deployment into Avalanche main-net</Typography>
         </TimelineContent>
       </TimelineItem>
 
@@ -108,7 +108,7 @@ export default function CustomizedTimeline() {
           <Typography variant="h6" component="span" sx={{ color:'#487C89', fontWeight: 'bold' }}>
           March 2022
           </Typography>
-          <Typography sx={{ marginTop: '7px'}}>World.Protocol officialy deployed into mainet</Typography>
+          <Typography sx={{ marginTop: '7px'}}>World.Protocol officialy deployed into mainet + public sales</Typography>
         </TimelineContent>
       </TimelineItem>
     </Timeline>

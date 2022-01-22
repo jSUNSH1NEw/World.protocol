@@ -126,6 +126,15 @@
     overflow: hidden;
   }    
 
+  .card__footer {
+    padding: 0 2em 2em;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+  }
+
   @media screen and (max-width: 760px) {
     .cards {
       display: flex;

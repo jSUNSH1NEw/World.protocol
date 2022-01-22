@@ -17,23 +17,10 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import "./Main.css";
 
 
-const Text = styled(Paper)(({ theme }) => ({
-    ...theme.typography.body2,
-    textAlign: 'center',
-    color: "white",
-    backgroundColor: "rgba(0,0,0,0.0)",
-    fontFamily: "Montserrat",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    fontSize: "18px",
-    lineHeight: "22px",
-    marginTop: "100px",
-    marginBottom: "4px",
-  
-  }));
-const TextTittle = styled(Paper)(({ theme }) => ({
+const TextTittleN = styled(Paper)(({ theme }) => ({
     ...theme.typography.title,
     textAlign: 'center',
+    border: "none",
     backgroundColor: "rgba(0,0,0,0.0)",
     color: "white",
     fontFamily: "Montserrat",
@@ -41,10 +28,65 @@ const TextTittle = styled(Paper)(({ theme }) => ({
     fontWeight: "bold",
     fontSize: "25px",
     lineHeight: "22px",
-    marginTop: "100px",
+    marginTop: "22px",
+    marginBottom: "1px",
+    boxShadow: "none",
+  }))
+
+  const TextTittle = styled(Paper)(({ theme }) => ({
+    ...theme.typography.title,
+    textAlign: 'center',
+    border: "none",
+    backgroundColor: "rgba(0,0,0,0.0)",
+    color: "white",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "bold",
+    fontSize: "25px",
+    lineHeight: "22px",
+    marginTop: "22px",
+    marginBottom: "1px",
+    boxShadow: "none",
+    media: {
+        [theme.breakpoints.down('sm')]: {
+            fontSize: "20px",
+            lineHeight: "20px",
+            marginTop: "20px",
+            marginBottom: "1px",
+        },
+    },
+  }))
+
+const Text = styled(Paper)(({ theme }) => ({
+    ...theme.typography.body1,
+    textAlign: 'center',
+    color: "white",
+    backgroundColor: "rgba(0,0,0,0.0)",
+    fontFamily: "Montserrat",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: "18px",
+    marginTop: "50px",
     marginBottom: "4px",
-  
+    boxShadow: "none",
   }));
+
+  
+const StyledHr = styled(Paper)(({ theme }) => ({
+    width: "50%",
+    display: "block",
+    //make in center
+    marginLeft: "auto",
+    marginRight: "auto",
+    border: "0.5px",
+    borderColor: "#487C89",
+    height: "1px",
+    marginTop: "11px",
+    marginBottom: "11px",
+    boxShadow: "2px 2px 2px #487C89",
+
+    }))
+
 
   
 function Main() {
@@ -98,37 +140,46 @@ function Main() {
             </div>
 
             <h2 className="titleText">
-                How it works
+            What do we have to offer you
             </h2>
-            <Box sx={{ flexGrow: 1, mb:40}}>
+            <Box sx={{ flexGrow: 1, mb:20, ml: 8, mr:8, display: 'flex' }}>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 6, sm: 6, md: 4, lg:4 }} columns={12}>
                <Grid item xs={12} sm={12} md={4} lg={4} direction="column" justifyContent="center" alignItems="center">
-                   <TextTittle>Buy a TWRLD Passport</TextTittle>
-                   <Text> 
-                        By buying a TWRLD Passport you will become a citizen of world.protocole
-                        who get some part of the "TWRLD locked treasury", which is a DAO locked treasury 
-                        that is used to buy/sell WRLD.
-                   </Text>
+                    <TextTittleN >1.</TextTittleN>
+                    <TextTittle>More investment security</TextTittle>
+                    <StyledHr/>
+                    <Text> 
+                        TWRLD Passport. Will secure the sending of your investment to the right address.
+                        You will also feed the TWRLD treasury with the mint of our passport 
+                        and at the same time get the right to vote as a citizen 
+                        of the World Protocol on a certain part of the TWRLD treasury.
+                    </Text>
                </Grid>
 
                <Grid item xs={12} sm={12} md={4} lg={4}>
-                   <TextTittle >Enter in the WRLD dapps</TextTittle>
+                   <TextTittleN>2.</TextTittleN>
+                   <TextTittle >Regulate the market </TextTittle>
+                   <StyledHr/>
                    <Text> 
-                        You can enter in the WRLD dapps by using your passport.
-                        the will give you access to the dapps. Where you can make legendary
-                        staking/minting interest.
+                        TWRLD treasury will be used to regulate the market of wrld.
+                        50% of it locked into the  treasury of WRLD that is used to buy/sell WRLD.
+                        The remaining 50% will be used according to the saissonal vote of our DAO community having a passport for
                    </Text>
                </Grid>
-               
-               <Grid item xs={12} sm={12} md={4} lg={4}>
-                   <TextTittle >Make benefits</TextTittle>
-                    
+
+               <Grid item xs={12} sm={12} md={4} lg={4} sx={{ justifyContent: 'flex-end' }}>
+                <TextTittleN >3.</TextTittleN>
+                <TextTittle >Creates financial freedom</TextTittle>
+                <StyledHr/>
                    <Text> 
-                    We expect to become the first entity locked bond,
-                    with a Decentralized Autonomous Organization parameter 
+                    By Making legendary staking/minting compounding interest.
+                    With the wAVE (Staked WRLD) or the WRLD/AVAX LP
                    </Text>
-                </Grid>
+            </Grid>   
             </Grid>
+
+            
+
         </Box>
 
             <div className="titleText">

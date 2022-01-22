@@ -50,6 +50,8 @@ function Footer() {
     //const trimmedStakingAPY = trim(stakingAPY * 100, 1);
 
     return (
+
+      <div>
         <Box sx={{ flexGrow: 1 }}>
             <Grid container spacing={0} columns={16}>
                <Grid item xs={8} sm={8} md={4} lg={4}>
@@ -82,6 +84,9 @@ function Footer() {
                 </Grid>
             </Grid>
         </Box>
+
+      </div>
+        
     );
 }
 

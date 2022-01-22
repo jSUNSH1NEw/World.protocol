@@ -22,7 +22,7 @@ function App() {
           <Route path="/createPassport" element={<CreatePassport />} />
           <Route path="/getPassport" element={<BuyPassport />} />
           <Route path="/app/*" element={<Dapps />} />
-          <Route path="" element={<Quatre100 />} />
+          <Route path="/*" element={<Quatre100 />} />
         </Routes>
       </Router>
   );
