@@ -3,15 +3,33 @@ pragma solidity ^0.8.2;
 
 import "@openzeppenlin/contracts/token/ERC1155/ERC1155.sol";
 import "@openzeppenlin/contracts/acess/Ownable.sol";
+import "./TwrldERC20.sol";
+import "./Treasurytw.sol";
+import "./passportConstruct.sol";
 
-contract TicketAuth is ERC1155, Ownable {
+contract Passport is ERC1155, Ownable {
     uint256 public tokenCounter;
     constructor () public ERC1155 ("TWRLDpassport", "TWRLDPassport") {
         tokenCounter = 0;
     }
 
+    //add TWRLDERC20 address to passport
+    TwrldERC20 public token = TwrldERC20(0x0);
+    uint256 public mintAmount = 50;
+    string public tokenURI = "https://twrld.io/passport"; 
 
- //function to mint a new token
+
+
+    // @notice mint a new passport to TwrldERC20
+
+    function mintPassport(address _token, uint256 _mintAmount) public {
+        require (_token != 0x0);
+        require (_mintAmount > 0);
+        require (tokenCounter > 0);
+        token = TwrldERC20(_token);
+        token.mint(_mintAmount);
+    }
+
 
     function mintPassport(string memory tokenURI) public returns (uint256) {
 
@@ -23,17 +41,4 @@ contract TicketAuth is ERC1155, Ownable {
         return newTWRLDpass;
 
     }
-
-    //function too geth the data from the tokenURI
-
-    function getTokenURI(uint256 tokenId) public view returns (string memory) {
-        //check if tokenID is valid
-        require(_isValidTokenId(tokenId));
-        //check if token is minted by this contract
-        require(_isMintedBy(tokenId, msg.sender));
-        //
-
-        return _getTokenURI(tokenId);
-    }
-
 }
