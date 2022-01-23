@@ -7,13 +7,13 @@
   
 ### Quick Links
   
-<a href=''>
+<a href='https://modest-murdock-eac5b5.netlify.app/'>
   
 <img src='https://img.shields.io/badge/HOMEPAGE-gray?style=for-the-badge'>
   
 </a>
   
-<a href=''>
+<a href='https://docs.google.com/presentation/d/1JPaFcoka9lJe69fHkyuUfadY34D-0TREzMhl97q--PU/edit?usp=sharing'>
   
 <img src='https://img.shields.io/badge/Lite.Paper-blue?style=for-the-badge'>
   
