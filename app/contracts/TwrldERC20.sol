@@ -8,11 +8,16 @@ import "@openzeppelin/contracts/token/ERC20/extensions/draft-ERC20Permit.sol";
 import "./BasicMetaTransaction.sol";
 
 /// @custom:security-contact samuel.gao023@gmail.com
+/// @custom:dev-contact weertz.joffrey@protonmail.ch
+
 contract WorldMillion is ERC20, ERC20Burnable, Ownable, ERC20Permit, BasicMetaTransaction {
     constructor() ERC20("EntityWorldProtocol", "TWRLD") ERC20Permit("EntityWorldProtocol", "TWRLD") BasicMetaTransaction(") {
-        // Premint = 10000000 (changable)
-        // decimals = 18 (we can change that in constructor) 
-        // totalSupply = 1.8 Billion is good for 12Billion users 
+        // Premint = 10 000 000 (changable)
+        // decimals = 11 (we can change that in constructor) 
+        // totalSupply = low over Billion can handle 12Billion users ? 
+        //if they get use by years and regulate by years ? 
+        //like in a years 100millions user can maker profit  
+        // then they just hodl for the new 100millions users coming ?  
         _mint(msg.sender, 10000000 * 10 ** decimals());
     }
 

@@ -1,5 +1,4 @@
-pragma solidity 0.4.18;
-
+pragma solidity ^0.8.2;
 import "zeppelin-solidity/contracts/ownership/Ownable.sol";
 import "zeppelin-solidity/contracts/math/SafeMath.sol";
 import "./WrldERC20.sol";

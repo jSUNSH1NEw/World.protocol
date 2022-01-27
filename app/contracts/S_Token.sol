@@ -65,7 +65,7 @@ contract WRLDBondOne is ERC20, ERC20Burnable, Ownable {
 
     // TODO: The details are depend on you, msg.sender may be not right here.
     //      1) mint can be done from the owner of WRLD.
-    //      2) burn?? Do we burn the money of the owner of WRLD? or burn specified account with given number of token?
+    //   
     function MintOrBurn(IERC20 wrld) external {
 
         if (wrld.totalSupply() > msg.sender.totalSupply()) {
