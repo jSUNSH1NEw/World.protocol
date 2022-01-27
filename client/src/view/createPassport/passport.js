@@ -55,6 +55,7 @@ export default function SignInSide() {
       walletReceveir: walletReceiver,
       date: new Date(),
     });
+    
     signup(user);
     setLoading(true);
 
