@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box,Button, Grid, Typography, createTheme, ThemeProvider,Link } from '@mui/material/';
 import LoadingButton from '@mui/lab/LoadingButton';
-import { useMoralis, useMoralisWeb3Api } from 'react-moralis';
+import { useMoralis, useMoralisWeb3Api, useNewMoralisObject } from 'react-moralis';
 import { PositionedSnackbar, PositionedSnackbar2 } from './entry.styles.js'
 import {CreateObject} from '../../store/model/user.model.js';
 
@@ -28,11 +28,13 @@ function Copyright(props) {
 const theme = createTheme();
 export default function SignInSide() {
   const [username, setUsername] = React.useState();
+  const [password, setPassword] = React.useState();
   const [walletReceiver, setWalletReceiver] = React.useState();
   const [loading, setLoading] = React.useState(false);
   const [getTWRLD, setgetTWRLD] = React.useState();
-  const { isAuthenticated, chainId, signup } = useMoralis();
+  const { isAuthenticated, chainId, signup, user } = useMoralis();
   const { native } = useMoralisWeb3Api();
+  const {isSaving, error, save} = useNewMoralisObject('DaoUsers');
   
 
   const handleSubmit = (event) => {
@@ -41,34 +43,17 @@ export default function SignInSide() {
     // eslint-disable-next-line no-console
     data.append('username', username);
     data.append('walletReceiver', walletReceiver);
-  
     console.log({
       username,
       walletReceiver,
     });
 
-    //create user  in CreateSchema
-    //call Logic function for create user in db
-
-    const user = new CreateObject.AddUser.save({
-      username: username,
-      walletReceveir: walletReceiver,
-      date: new Date(),
-    });
-    
-    signup(user);
-    setLoading(true);
-
-    // const { error, isUploading, moralisFile ,saveFile } = useMoralisFile();
-    // saveFile(
-      // "username",
-      // "walletReceveir",
-      // files,
-      // {
-        // saveIPFS: true,
-        // saveMoralis: true,
-      // }
-    // );
+     save ({
+          username: username,
+          walletReceveir: walletReceiver,
+          date: new Date(),
+      });
+    signup(data);
   };
 
   const getPassport = (event) => {
@@ -187,9 +172,11 @@ export default function SignInSide() {
                   {loading ? 'Loading...' : 'Get TWRLD'}
                 </Link>
               </LoadingButton>
+              
                 <LoadingButton
-                    onClick={(e) => handleSubmit(e)}
+                    onClick={() => handleSubmit()}  
                     loading={loading}
+                    disabled={isSaving}
                     loadingIndicator="Loading..."
                     type="submit"
                     fullWidth

@@ -8,8 +8,6 @@ Includes API Server utilities:
   * Helmet helps you secure your Express apps by setting various HTTP headers. It's not a silver bullet, but it can help!
 * [dotenv](https://www.npmjs.com/package/dotenv)
   * Dotenv is a zero-dependency module that loads environment variables from a `.env` file into `process.env`
-* [Moralis](https://www.npmjs.com/package/dotenv)
-  * Node provider and a WEB3 back -end keys in hand`
 
 Development utilities:
 
