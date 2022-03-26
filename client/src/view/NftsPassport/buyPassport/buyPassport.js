@@ -27,13 +27,10 @@ export default function SignInSide() {
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid
-          item
-          xs={true}
-          sm={4}
-          md={7}
           sx={{
             backgroundColor: 'black',
-          }}xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+          }} 
+          xs={true} sm={4} md={5} component={Paper} elevation={6} square>
             <Grid container sx={{justifyContent:'center', marginTop:'10px'}}> 
             <img className='logo' src={WRLDLogo} alt="Logo of world" />   
             </Grid>
