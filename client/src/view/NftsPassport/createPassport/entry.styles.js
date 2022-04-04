@@ -10,6 +10,7 @@ export const PositionedSnackbar = (props) => {
       messages: 'Please refer a non-metamask wallet for the Wallet-receiver input',
     });
   
+    
     return (
       <Snackbar
         anchorOrigin={{

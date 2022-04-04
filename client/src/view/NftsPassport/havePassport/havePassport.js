@@ -15,6 +15,7 @@ const havePassport = () => {
     function handleClick() {
         setLoading(true);
     }
+
     const Redirect = (event) => {
         // if (isAuthenticated && Id === userId === NftId) {
         //     return <Redirect to={'/app'} />;
@@ -22,3 +23,5 @@ const havePassport = () => {
     }
 
 }
+
+export default havePassport;

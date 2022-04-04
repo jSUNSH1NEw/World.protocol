@@ -7,8 +7,8 @@ import {
 import Landing from "./view/Landing/landing";
 import CreatePassport from "./view/NftsPassport/createPassport/passport";
 import BuyPassport from "./view/NftsPassport/buyPassport/buyPassport";
-import AlreadyHave from "./view/NftsPassport/buyPassport/havePassport";
-import PrivateSale from "view/privateSales/privateSaleLanding";
+import AlreadyHave from "./view/NftsPassport/havePassport/havePassport";
+//import PrivateSale from "view/privateSales/privateSaleLanding";
 import Dashboard from "./view/dappDashboard/dashboard";
 import P404 from "./view/404/404";
 

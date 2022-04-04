@@ -3,10 +3,10 @@ import { CssBaseline,TextField,FormControlLabel,Checkbox,Paper ,Box,Button, Grid
 import LoadingButton from '@mui/lab/LoadingButton';
 import { useMoralis, useMoralisWeb3Api, useNewMoralisObject } from 'react-moralis';
 import { PositionedSnackbar, PositionedSnackbar2 } from './entry.styles.js'
-import {CreateObject} from '../../store/model/user.model.js';
+
 
 import './entry.css';
-import WRLDLogo  from "./../../assets/icon/LogoDesigne.png";
+import WRLDLogo  from "./../../../assets/icon/LogoDesigne.png";
 //{isAuthenticated&&chainId==='0xa869'?<Redirect to={'/buy'}/>:null}
 
 
@@ -123,6 +123,7 @@ export default function SignInSide() {
                 label="username"
                 name="username"
                 type="text"
+
                 autoComplete="Username"
                 value={username}
                 onChange={(event) => setUsername(event.target.value)}
