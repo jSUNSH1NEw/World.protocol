@@ -23,7 +23,7 @@
     "express": "^4.17.1",
     "helmet": "^4.6.0",
     "morgan": "^1.10.0",
-    "web3": "^1.7.0"
+    "web3": "^1.7.1"
   },
   "devDependencies": {
     "eslint": "^7.28.0",
