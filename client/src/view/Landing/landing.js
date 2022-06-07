@@ -10,7 +10,7 @@ import styled from "styled-components";
 
 const StyledDiv = styled.div`
 width: 100%;
-background: rgb(0, 0, 0);
+background: linear-gradient(180deg, #15192D 21.67%, #192353 99.27%);
 display: flex;
 flex-direction: column;
 `;

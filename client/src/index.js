@@ -14,7 +14,7 @@ const Application = () => {
     const isServerInfo = appId && serverUrlDev ? true : false;
     if (isServerInfo) 
         return (
-        <MoralisProvider appId="appId" serverUrl="serverUrl">
+        <MoralisProvider appId="appId" serverUrl="serverUrlDev">
         <MoralisDappProvider> 
            <SnackbarProvider>
              <App isServerInfo/>

@@ -2,29 +2,59 @@
 
 .landing-main {
     margin-top: 105px;
-    flex: 1;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     z-index: 2;
-    position: relative;
 }
-.landing-main .landing-main-img-wrap {
-    max-width: 300px;
-    max-height: 300px;
+
+.topleft {
+text-align: left;
+font-family: Montserrat Light;
+margin-bottom: 50px;
+}
+
+.Wrapbox{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.Wrapbox .roundedbox {
+    border-radius: 17px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width:18px;
+    height:22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.landing-main-img-wrap {
+    display:flex;
+    margin:auto;
+    max-width: 250px;
+    max-height: 250px;
     margin-bottom: 2px;
 }
-.landing-main .landing-main-img-wrap img {
-    width: 100%;
+ .landing-main-img-wrap img {
+    align-items: right;
+    width: 78%;
     z-index: 10;
 }
-.landing-main .landing-main-title-wrap {
-    text-align: center;
+.landing-main-right .landing-main-title-wrap {
+    align-content: flex-end;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-.landing-main .landing-main-title-wrap p {
+.landing-main.left .landing-main-title-wrap p {
     font-family: Montserrat Light;
     font-style: normal;
     font-weight: bold;
@@ -32,8 +62,18 @@
     color: #fff;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.landing-main .Land-main_title {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 55px;
+    color: #fff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .landing-main .landing-main-help-text-wrap {
-    text-align: center;
+    text-align: left;
+    width: 50%;
     margin-bottom: 20px;
 }
 .landing-main .landing-main-help-text-wrap p {
@@ -79,8 +119,6 @@
     9px 0 9px rgb(255, 240, 156);         /* outer right cyan */
 }
 
-
-
 .landing-main .landing-main-btns-wrap .landing-main-btn p {
     font-family: Montserrat Bold;
     font-style: normal;
@@ -88,6 +126,40 @@
     font-size: 14px;
     line-height: 22px;
     color: rgb(0, 0, 0);
+}
+
+.landing-main-btn2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 11px;
+    padding: 2px 30px 2px 30px;
+    min-width: 35px;
+    height: 37px;
+    background: white;
+    box-shadow:
+    0 0 10px #fff,            /* outer white */
+    -5px 0 10px rgb(82, 229, 255),        /* outer left magenta */
+    5px 0 10px rgb(18, 43, 80);         /* outer right cyan */
+    border-radius: 27px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 50px;
+}
+.landing-main-btn2 p {
+    font-family: Montserrat Bold;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 22px;
+    color: rgb(0, 0, 0);
+}
+.landing-main-btn2:hover  {
+    transition-duration: 0.3s;
+    box-shadow:
+    0 0 10px #fff,            /* outer white */
+    -9px 0 9px #a0a6ff,        /* outer left magenta */
+    9px 0 9px rgb(255, 240, 156);         /* outer right cyan */
 }
 
 

@@ -3,10 +3,10 @@ import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Button, 
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import './header.css';
-import WRLDIcon from "../../../../assets/icon/coin.png";
-import "../../../../assets/css/fonts.css";
+import WRLDIcon from "../../../../assets/icon/WorldEconomy.png";
+import WRLDIcon2 from "../../../../assets/icon/coin.png";
 
-const pages = ['Our Team','Roadmap'];
+const pages = ['Ecosystem','Learn','Initiative','Roadmap'];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -84,9 +84,11 @@ const ResponsiveAppBar = () => {
   
   const StyledInputBase = styled('div')(({ theme }) => ({
     display: 'flex',
+    border: `1px solid`,
+    borderRadius: '35px',
     alignItems: 'center',
     flexDirection: 'column',
-    color: 'inherit',
+    backgroundColor: "black",
       padding: theme.spacing(1, 1, 1, 0),
       // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(2)})`,
@@ -118,7 +120,7 @@ const ResponsiveAppBar = () => {
   }));
 
   return (
-    <AppBar position="static" sx={{ backgroundColor:'rgba(255,255,255,0.0) ', boxShadow:'0', zIndex:'1', flexGrow: 1}}>
+    <AppBar position="static" sx={{ backgroundColor:'rgba(255,255,255,0.0) ', boxShadow:'0', zIndex:'1', flexGrow: 1, fontStyle:'MontSerrat'}}>
       <Container maxWidth="xl">
         <Toolbar  sx={{ mr: 10 }}>
 
@@ -156,24 +158,24 @@ const ResponsiveAppBar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" }
+                display: { xs: "block", md: "none", fontSize: "16px" },
               }}
             >
               
                 <MenuItem  onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Our team</Typography>
+                  <Typography textAlign="center">Ecosystem</Typography>
                 </MenuItem>
                 <MenuItem  onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Our Roadmap</Typography>
+                  <Typography textAlign="center">learn</Typography>
                 </MenuItem>
                 <MenuItem  onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">Social</Typography>
+                  <Typography textAlign="center">Initiative</Typography>
                 </MenuItem>
 
                 <MenuItem  onClick={handleCloseNavMenu}>
                   <SearchPhone sx={{ display: { xs: "flex", md: "none" } }}>
                     <SearchIconWrapperPhone> 
-                      <img className='logos2' src={WRLDIcon} alt='Logo of world into the navbar' />    
+                      <img className='logos2' src={WRLDIcon2} alt='Logo of world into the navbar' />    
                     </SearchIconWrapperPhone> 
 
                     <StyledInputBasePhone
@@ -188,7 +190,7 @@ const ResponsiveAppBar = () => {
           </Box>
           <Search sx={{ display: { xs: "none", md: "flex" } }}>
             <SearchIconWrapper> 
-              <img className='logos2' src={WRLDIcon} alt='Logo of world into the navbar' />    
+              <img className='logos2' src={WRLDIcon2} alt='Logo of world into the navbar' />    
             </SearchIconWrapper> 
 
             <StyledInputBase
@@ -204,9 +206,12 @@ const ResponsiveAppBar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 5, color: 'white', display: 'block' }}
+                sx={{ my: 5, color: 'white', display: 'block', }}
               >
-                {page}
+                
+                <Typography noWrap>
+                 {page}
+                </Typography>
               </Button>
 
           

@@ -1,14 +1,11 @@
-@import "../../../../assets/css/fonts.css";
-
-
 
 .logos {
-    height: 75px;
-    width: 85px;
+    justify-content: flex-start;
+    width: 14%;
+    height: 25%;
 }
 .logos2 {
+    justify-content: flex-start;
+    width: 25px;
     height: 25px;
-    width: 27px;
-    display: flex;
-    justify-content: center;
 }
